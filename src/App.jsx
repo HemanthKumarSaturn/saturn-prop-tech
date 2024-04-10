@@ -15,27 +15,34 @@ import OtherProjects from "./components/OtherProjects/OtherProjects";
 import Footer from "./components/Footer/Footer";
 import ExpertOpinion from "./components/ExperOpinions/ExperOpinion";
 import Location from "./components/Location/Location";
+import BannerImage from "./components/Banner/BannerImage";
+import Banner from "./components/Banner/Banner";
+import HeadingBar from "./components/HeadingBar/HeadingBar";
 
 function App() {
   return (
-    <div className="grid gap-8">
-      <Filter />
-      <Vision />
-      <Highlights />
-      <Pricing />
-      <Location />
-      <ValueAdded />
-      <Gallery />
-      <Ameneties />
-      <MasterPlan />
-      <Specifications />
-      <ExpertOpinion />
-      <FAQS />
-      <AboutBuilder />
-      <ProjectDetails />
-      <OtherProjects />
-      <Footer />
-    </div>
+    <>
+      <HeadingBar />
+      <div className="grid gap-8">
+        <Banner />
+        {/* <Filter /> */}
+        <Vision />
+        <Highlights />
+        {/* <Pricing /> */}
+        <Location />
+        <ValueAdded />
+        <Gallery />
+        <Ameneties />
+        <MasterPlan />
+        <Specifications />
+        <ExpertOpinion />
+        <FAQS />
+        <AboutBuilder />
+        <ProjectDetails />
+        <OtherProjects />
+        <Footer />
+      </div>
+    </>
   );
 }
 

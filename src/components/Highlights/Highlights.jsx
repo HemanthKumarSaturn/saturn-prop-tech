@@ -7,6 +7,9 @@ import locationIcon from "../../assets/icons/location.png";
 import routeIcon from "../../assets/icons/route.png";
 import stampIcon from "../../assets/icons/stamp.png";
 import PrimaryButton from "../common/PrimaryButton";
+import HeadWithPara from "../common/HeadWithPara";
+import Paragraph from "../common/Paragraph";
+import HighlightsList from "./HighlightsList";
 
 function Highlights() {
   const mainHead = "Tangled Up in Green - Highlights";
@@ -44,29 +47,20 @@ function Highlights() {
       style={{
         borderRadius: "10px",
         background: "rgba(212, 214, 215, 0.19)",
-        height: "35rem",
+        width: "94%",
+        height: "40rem",
       }}
     >
-      <h2 className="text-2xl font-bold">{mainHead}</h2>
-      <p className="font-normal w-3/4 text-gray-500">{paragraph}</p>
-      <div className="flex flex-row items-center mx-auto gap-8 w-11/12">
-        <img src={highlightImg} style={{ width: "60%", height: "100%" }} />
-        <div className="flex flex-col gap-3 items-baseline">
-          {highlights?.map((highlight) => (
-            <div
-              className="flex flex-row items-center gap-3 font-semibold text-xl"
-              style={{ width: "240px" }}
-              key={highlight?.title}
-            >
-              <img
-                src={highlight?.icon}
-                style={{ width: "25px", height: "25px" }}
-              />
-              <div>{highlight?.title}</div>
-            </div>
-          ))}
-          <PrimaryButton />
-        </div>
+      <HeadWithPara text={mainHead} />
+      <div style={{ width: "60.625rem" }}>
+        <Paragraph text={paragraph} />
+      </div>
+      <div
+        className="flex flex-row items-center gap-8 h-96 justify-start"
+        style={{ width: "950px" }}
+      >
+        <img src={highlightImg} style={{ width: "65%", height: "100%" }} />
+        <HighlightsList />
       </div>
     </div>
   );

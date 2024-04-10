@@ -4,15 +4,23 @@ import StrongHeader from "../common/StrongHeader";
 import Paragraph from "../common/Paragraph";
 import Head from "../common/Head";
 import IconListContainer from "../IconListContainer";
+import HeadWithPara from "../common/HeadWithPara";
+import Heading from "../common/Heading";
 
 function ValueAdded() {
   const headerText = "Unveiling the Added Value at - Tangled Up In Green ";
   const blueText = "Beyond the Plots";
+  const para =
+    "Owning a plot at Tangled Up In Green, a meticulously crafted development by Total Environment, offers more than just a piece of land. Here’s what sets Tangled Up In Green apart: Read More.";
+
   return (
-    <div className="flex flex-col gap-4 items-center">
-      <BlueHeader text={blueText} />
-      <Head text={headerText} />
-      <Paragraph />
+    <div
+      className="flex flex-col gap-4 items-center"
+      style={{ background: "#F4F4F4" }}
+    >
+      <Heading caption={blueText} mainHead="" />
+      <HeadWithPara text={headerText} />
+      <Paragraph text={para} />
       <div className="flex w-full justify-between">
         <IconListContainer />
         <div style={{ width: "55rem", height: "25rem" }}>
