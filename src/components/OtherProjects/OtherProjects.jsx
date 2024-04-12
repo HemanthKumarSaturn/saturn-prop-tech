@@ -17,7 +17,7 @@ function OtherProjects() {
                   className="w-full aspect-[1.49]"
                 />
               </div>
-              <div className="justify-center px-8 py-6 mt-2.5 text-lg font-medium leading-10 text-black uppercase bg-white rounded-2xl max-md:px-5">
+              <div className="justify-center px-8 py-3  mt-2.5 text-lg font-medium leading-10 text-black uppercase bg-white rounded-2xl max-md:px-5 hover:bg-[#3742FA] text-center hover:text-white hover: cursor-pointer">
                 Pursuit Of A Radical Rhapsody
               </div>
             </div>
@@ -38,7 +38,7 @@ function OtherProjects() {
                   />
                 </div>
               </div>
-              <div className="justify-center items-center px-16 py-6 mt-2.5 text-lg font-medium leading-10 text-black uppercase bg-white rounded-2xl max-md:px-5">
+              <div className="justify-center items-center px-16 py-3  mt-2.5 text-lg font-medium leading-10 text-black uppercase bg-white rounded-2xl max-md:px-5 hover:bg-[#3742FA] text-center hover:text-white  hover: cursor-pointer">
                 In That Quite Earth
               </div>
             </div>
@@ -52,7 +52,7 @@ function OtherProjects() {
                   className="w-full aspect-[1.49]"
                 />
               </div>
-              <div className="justify-center items-center px-16 py-6 mt-2.5 text-lg font-medium leading-10 text-black uppercase bg-white rounded-2xl max-md:px-5">
+              <div className="justify-center items-center py-3 mt-2.5 text-lg font-medium text-black uppercase bg-white rounded-2xl max-md:px-5 hover:bg-[#3742FA] text-center hover:text-white  hover: cursor-pointer">
                 After The Rain
               </div>
             </div>

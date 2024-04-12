@@ -43,12 +43,12 @@ function Highlights() {
   ];
   return (
     <div
-      className="flex flex-col mx-auto justify-around gap-3 items-center"
+      className="flex flex-col mx-auto justify-center gap-y-7 items-center"
       style={{
         borderRadius: "10px",
         background: "rgba(212, 214, 215, 0.19)",
         width: "94%",
-        height: "40rem",
+        height: "42rem",
       }}
     >
       <HeadWithPara text={mainHead} />
@@ -57,7 +57,7 @@ function Highlights() {
       </div>
       <div
         className="flex flex-row items-center gap-8 h-96 justify-start"
-        style={{ width: "950px" }}
+        style={{ width: "68.125rem" }}
       >
         <img src={highlightImg} style={{ width: "65%", height: "100%" }} />
         <HighlightsList />

@@ -35,9 +35,9 @@ function Footer() {
                     <div className="text-sm font-medium text-white">
                       Company
                     </div>
-                    <div className="mt-3">Blog</div>
-                    <div className="mt-3.5">Careers</div>
-                    <div className="mt-3.5">Pricing</div>
+                    <div className="mt-3  cursor-pointer">Blog</div>
+                    <div className="mt-3.5  cursor-pointer">Careers</div>
+                    <div className="mt-3.5  cursor-pointer">Pricing</div>
                   </div>
                 </div>
                 <div className="flex flex-col ml-5 w-[41%] max-md:ml-0 max-md:w-full">
@@ -45,18 +45,22 @@ function Footer() {
                     <div className="text-sm font-medium text-white">
                       Resources
                     </div>
-                    <div className="mt-3">Documentation</div>
-                    <div className="mt-3.5">Papers</div>
-                    <div className="mt-3.5">Press Conferences</div>
+                    <div className="mt-3  cursor-pointer">Documentation</div>
+                    <div className="mt-3.5  cursor-pointer">Papers</div>
+                    <div className="mt-3.5  cursor-pointer">
+                      Press Conferences
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                   <div className="flex flex-col grow text-xs text-white text-opacity-80 max-md:mt-10">
                     <div className="text-sm font-medium text-white">Legal</div>
-                    <div className="mt-3">Terms of Service</div>
-                    <div className="mt-3.5">Privacy Policy</div>
-                    <div className="mt-3.5">Cookies Policy</div>
-                    <div className="mt-3.5">Data Processing</div>
+                    <div className="mt-3  cursor-pointer">Terms of Service</div>
+                    <div className="mt-3.5  cursor-pointer">Privacy Policy</div>
+                    <div className="mt-3.5  cursor-pointer">Cookies Policy</div>
+                    <div className="mt-3.5  cursor-pointer">
+                      Data Processing
+                    </div>
                   </div>
                 </div>
               </div>
@@ -70,17 +74,17 @@ function Footer() {
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/816bd8cbbee0d9ee445b34e7f9c49cae481fc1723d828e17f9afc073ed47c3b0?apiKey=6d29d163b59344eda42474c42f65e83e&"
-            className="shrink-0 aspect-square w-[18px]"
+            className="shrink-0 aspect-square w-[18px] cursor-pointer"
           />
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed5824165561ee6a3aa861c2ae17c46dc9aed053d8fc96a009c784596cb413b4?apiKey=6d29d163b59344eda42474c42f65e83e&"
-            className="shrink-0 aspect-square w-[18px]"
+            className="shrink-0 aspect-square w-[18px] cursor-pointer"
           />
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/2849470a22a4b339b0db985461b001c415b7ddb64d8ff02e2ac39c4115b465e6?apiKey=6d29d163b59344eda42474c42f65e83e&"
-            className="shrink-0 aspect-[1.05] w-[19px]"
+            className="shrink-0 aspect-[1.05] w-[19px] cursor-pointer"
           />
         </div>
       </div>
@@ -95,11 +99,11 @@ function Footer() {
         information for making any booking/purchase in any project of the
         company. Nothing on this website constitutes advertising, marketing,
         booking, selling or an offer for sale, or invitation to purchase a unit
-        in any project by the company. The company is not <br />
-        liable for any consequence of any action taken by the viewer relying on
-        such material/ information on this website. The RERA acknowledge number
-        of project is ACK/KA/RERA/1250/303/PR/271223/007703 and registration
-        number is PRM/KA/RERA/1250/303/PR/080124/006538.
+        in any project by the company. The company is not liable for any
+        consequence of any action taken by the viewer relying on such material/
+        information on this website. The RERA acknowledge number of project is
+        ACK/KA/RERA/1250/303/PR/271223/007703 and registration number is
+        PRM/KA/RERA/1250/303/PR/080124/006538.
       </div>
     </div>
   );

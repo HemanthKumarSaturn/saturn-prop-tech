@@ -1,26 +1,47 @@
 import * as React from "react";
 
-function Specification({ title, description }) {
+function Icon({ src, alt }) {
   return (
-    <div className="flex gap-3.5 items-start px-5 py-5 bg-white rounded-lg justify-center">
-      <div
-        className="flex justify-center items-center px-5 mt-1 rounded-full shadow-sm h-[69px] w-[69px]"
-        style={{ background: "linear-gradient(#3742FA, #D4D6D7)" }}
-      >
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0201520132664ab690a65668bdb3b13307ecb894da8489e23af020422b796a21?apiKey=6d29d163b59344eda42474c42f65e83e&"
-          className="w-9 aspect-square"
-        />
-      </div>
-      <div className="flex flex-col">
-        <div className="text-xl font-bold leading-7 text-black">{title}</div>
-        <div className="mt-2 text-xs leading-4 text-black text-opacity-80">
-          {description}
-        </div>
-      </div>
+    <div
+      className="flex justify-center items-center px-4 rounded-full shadow-sm h-[69px] min-h-[69px] w-[69px]"
+      style={{ background: "linear-gradient(#3742FA, #D4D6D7)" }}
+    >
+      <img src={src} alt={alt} className="aspect-square w-[37px]" />
     </div>
   );
 }
 
-export default Specification;
+function Content({ title, description }) {
+  return (
+    <div className="flex flex-col">
+      <h2 className="text-xl font-bold leading-7 text-black">{title}</h2>
+      <p className="mt-2 text-xs leading-4 text-black text-opacity-80">
+        {description}
+      </p>
+    </div>
+  );
+}
+
+function Card({ icon, title, description }) {
+  return (
+    <div className="flex gap-3.5 items-center, justify-center p-5 bg-white">
+      <Icon src={icon.src} alt={icon.alt} />
+      <Content title={title} description={description} />
+    </div>
+  );
+}
+
+function MyComponent({ card }) {
+  return (
+    <div>
+      <Card
+        key={card.title}
+        icon={card.icon}
+        title={card.title}
+        description={card.description}
+      />
+    </div>
+  );
+}
+
+export default MyComponent;

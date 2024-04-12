@@ -7,7 +7,7 @@ function Location() {
   const headerText = "Tangled Up in Green - Location";
   return (
     <div
-      className="flex flex-col mx-auto justify-around gap-3 items-center"
+      className="flex flex-col mx-auto justify-around gap-y-7 items-center"
       style={{ position: "relative", width: "94%" }}
     >
       <HeadWithPara text={headerText} />

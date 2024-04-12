@@ -34,13 +34,15 @@ function IconListContainer() {
   ];
 
   return (
-    <div className="flex flex-col text-2xl font-semibold leading-7 text-black gap-4 items-baseline">
-      {ICON_LIST.map((ICON) => (
-        <IconWithLabel
-          title={ICON.title}
-          URL={`${BASE}${ICON.endPoint}${API}`}
-        />
-      ))}
+    <div className="flex flex-col justify-between items-center h-72">
+      <div className="flex flex-col font-semibold leading-7 text-black gap-4 items-baseline">
+        {ICON_LIST.map((ICON) => (
+          <IconWithLabel
+            title={ICON.title}
+            URL={`${BASE}${ICON.endPoint}${API}`}
+          />
+        ))}
+      </div>
       <PrimaryButton />
     </div>
   );

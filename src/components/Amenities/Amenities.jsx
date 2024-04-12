@@ -2,6 +2,7 @@ import React from "react";
 import Head from "../common/Head";
 import Icon from "../common/Icon";
 import PrimaryButton from "../common/PrimaryButton";
+import HeadWithPara from "../common/HeadWithPara";
 
 function Amenities() {
   const BASE = "https://cdn.builder.io/api/v1/image/assets/TEMP/";
@@ -62,10 +63,10 @@ function Amenities() {
 
   return (
     <div
-      className="flex flex-col items-center gap-20"
-      style={{ background: "#F7F7F7" }}
+      className="flex flex-col items-center gap-20 justify-center"
+      style={{ background: "#F7F7F7", height: "35rem" }}
     >
-      <Head text={headerText} />
+      <HeadWithPara text={headerText} />
       <div className="grid gap-4">
         <div className="grid grid-cols-5 gap-20">
           {ICONS.map((icon) => (

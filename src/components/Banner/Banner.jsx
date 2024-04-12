@@ -14,6 +14,7 @@ function Banner() {
         height: "88vh",
         aspectRatio: "1.82",
         backgroundSize: "cover",
+        // backgroundRepeat: "no-repeat",
       }}
       className="flex flex-col items-baseline px-20 justify-center"
     >
