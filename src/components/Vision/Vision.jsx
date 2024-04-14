@@ -3,7 +3,7 @@ import PrimaryButton from "../common/PrimaryButton";
 import Heading from "../common/Heading";
 import Paragraph from "../common/Paragraph";
 
-function Vision() {
+function Vision({ overview }) {
   const blueHeading = "An Uncompromising Vision";
   const mainHeading = "Total Environment - Tangled Up In Green Plots";
   const paragraphText =
@@ -12,6 +12,7 @@ function Vision() {
     <div
       className="flex flex-col items-center gap-y-7 mx-auto"
       style={{ width: "60.625rem" }}
+      ref={overview}
     >
       <Heading caption={blueHeading} mainHead={mainHeading} />
       <Paragraph text={paragraphText} />

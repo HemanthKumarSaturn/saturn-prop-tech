@@ -4,7 +4,7 @@ import Icon from "../common/Icon";
 import PrimaryButton from "../common/PrimaryButton";
 import HeadWithPara from "../common/HeadWithPara";
 
-function Amenities() {
+function Amenities({ amenities }) {
   const BASE = "https://cdn.builder.io/api/v1/image/assets/TEMP/";
   const API = "?apiKey=6d29d163b59344eda42474c42f65e83e&";
   const ICONS = [
@@ -63,8 +63,14 @@ function Amenities() {
 
   return (
     <div
-      className="flex flex-col items-center gap-20 justify-center"
-      style={{ background: "#F7F7F7", height: "35rem" }}
+      className="flex flex-col items-center gap-20 justify-center rounded-lg"
+      style={{
+        background: "#F7F7F7",
+        height: "35rem",
+        width: "74rem",
+        margin: "0px auto",
+      }}
+      ref={amenities}
     >
       <HeadWithPara text={headerText} />
       <div className="grid gap-4">

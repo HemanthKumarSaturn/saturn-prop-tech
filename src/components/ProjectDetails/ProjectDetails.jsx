@@ -2,7 +2,10 @@ import * as React from "react";
 
 function ProjectDetails() {
   return (
-    <div className="py-7 pr-20 pl-7 rounded-2xl bg-neutral-100 max-md:px-5">
+    <div
+      className="py-7 pr-20 pl-7 rounded-2xl bg-neutral-100 max-md:px-5"
+      style={{ width: "74rem", margin: "0px auto" }}
+    >
       <div className="text-2xl font-bold text-black ">Projects Details:</div>
 
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">

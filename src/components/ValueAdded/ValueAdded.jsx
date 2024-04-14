@@ -15,8 +15,13 @@ function ValueAdded() {
 
   return (
     <div
-      className="flex flex-col gap-y-7 items-center justify-center"
-      style={{ background: "#F4F4F4", height: "42rem" }}
+      className="flex flex-col gap-y-7 items-center justify-center rounded-lg"
+      style={{
+        background: "#F4F4F4",
+        height: "42rem",
+        width: "74rem",
+        margin: "0px auto",
+      }}
     >
       <Heading caption={blueText} mainHead="" />
       <HeadWithPara text={headerText} />

@@ -60,12 +60,14 @@ function FAQList() {
   const [faqData, setFaqData] = React.useState(initialFaqData);
   return (
     <div
-      className="flex flex-col justify-end pt-14 pl-1.5 bg-purple-50 rounded-xl"
+      className="flex flex-col justify-center items-center gap-4 bg-purple-50 rounded-2xl"
       style={{
         width: "74rem",
         margin: "0px auto",
         display: "flex",
         alignItems: "center",
+        height: "fit-content",
+        padding: "3rem 0",
       }}
     >
       <h1 className="self-center text-4xl font-bold text-black leading-[51.8px] max-md:max-w-full">

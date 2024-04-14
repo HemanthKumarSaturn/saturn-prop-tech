@@ -2,7 +2,10 @@ import * as React from "react";
 
 function AboutBuilder() {
   return (
-    <div className="flex flex-col px-11 pt-12 pb-6 rounded-2xl bg-gray-200 bg-opacity-40 max-md:px-5">
+    <div
+      className="flex flex-col px-11 pt-12 pb-6 rounded-2xl bg-gray-200 bg-opacity-40 max-md:px-5"
+      style={{ width: "74rem", margin: "0px auto" }}
+    >
       <div className="self-center text-4xl font-bold text-black leading-[51.8px]">
         About Builder
       </div>
@@ -40,7 +43,7 @@ function AboutBuilder() {
               <img
                 loading="lazy"
                 srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/aeee67acf492c305471a798c34f984bc832abcb9eb968276159f4f2bdf6a3528?apiKey=6d29d163b59344eda42474c42f65e83e&"
-                className="w-full aspect-[1.15] max-md:max-w-full"
+                className="w-full aspect-[1.15] max-md:max-w-full  rounded-2xl"
               />
             </div>
           </div>

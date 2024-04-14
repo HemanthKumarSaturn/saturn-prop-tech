@@ -4,7 +4,10 @@ import HeadWithPara from "../common/HeadWithPara";
 function MasterPlan() {
   const headerText = "Tangled Up in Green - Master Plan";
   return (
-    <div className="flex flex-col items-center">
+    <div
+      className="flex flex-col items-center"
+      style={{ width: "74rem", margin: "0px auto" }}
+    >
       <HeadWithPara text={headerText} />
       <img
         loading="lazy"

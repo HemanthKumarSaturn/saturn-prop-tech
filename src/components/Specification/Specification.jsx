@@ -4,7 +4,7 @@ import Specification from "../common/Specification";
 import SubHead from "../common/SubHead";
 import HeadWithPara from "../common/HeadWithPara";
 
-function Specifications() {
+function Specifications({ specification }) {
   const headerText = "Tangled Up in Green - Specification";
   const subText1 = "SITE DEVELOPMENT";
   const subText2 = "UTILITIES";
@@ -103,7 +103,11 @@ function Specifications() {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-y-7 justify-center">
+    <div
+      className="flex flex-col items-center gap-y-7 justify-center"
+      style={{ width: "74rem", margin: "0px auto" }}
+      ref={specification}
+    >
       <HeadWithPara text={headerText} />
       <div className="grid gap-4">
         <div className="grid grid-rows-1 grid-cols-2 gap-x-[32rem]">
