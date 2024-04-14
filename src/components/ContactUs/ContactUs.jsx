@@ -61,7 +61,7 @@ function ContactUs() {
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c7f5d5b2c8bc8544aa807087448adb8aca990e97df9394a69830fd480996fb8?apiKey=6d29d163b59344eda42474c42f65e83e&"
           alt=""
-          className="aspect-[1.11]"
+          className="aspect-[1.11]   rounded-2xl"
           style={{ width: "100%", height: "100%" }}
         />
       </div>

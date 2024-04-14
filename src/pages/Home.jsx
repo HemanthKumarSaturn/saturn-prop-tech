@@ -26,7 +26,7 @@ function Home() {
   const specification = useRef(null);
 
   return (
-    <>
+    <div style={{ width: "100%", margin: "0px auto" }}>
       <HeadingBar
         overview={overview}
         amenities={amenities}
@@ -52,7 +52,7 @@ function Home() {
         <OtherProjects />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
