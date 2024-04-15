@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 
 const TextContent = ({ title, description }) => (
   <>
@@ -38,11 +40,48 @@ function ContactUs() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [contactNumber, setContactNumber] = React.useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const submitEnquiry = async (
+    companyName,
+    userName,
+    userEmail,
+    userMobile,
+    sectionEnquired
+  ) => {
+    const payload = {
+      companyName,
+      userName,
+      userEmail,
+      userMobile,
+      sectionEnquired,
+    };
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/addEnquiry",
+        payload
+      );
+      console.log({ response });
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
+    const sectionEnquired = location?.state?.sectionEnquired;
+    console.log({ sectionEnquired });
     console.log("Form submitted with:", { name, email, contactNumber });
+    submitEnquiry(
+      "Total Environment",
+      name,
+      email,
+      contactNumber,
+      sectionEnquired
+    );
+    navigate("/");
   };
 
   return (

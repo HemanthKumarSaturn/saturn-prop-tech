@@ -22,7 +22,7 @@ function Banner() {
       <div className="flex flex-col gap-6 items-baseline">
         <BannerCaption />
         <BannerHead />
-        <PrimaryButton />
+        <PrimaryButton sectionEnquired="Banner" />
       </div>
     </div>
   );

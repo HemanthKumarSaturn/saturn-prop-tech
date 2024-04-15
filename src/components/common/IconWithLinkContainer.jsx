@@ -28,7 +28,7 @@ function IconWithLinkContainer() {
         <IconWithLink />
         <IconWithLink />
       </div>
-      <PrimaryButton />
+      <PrimaryButton sectionEnquired="Location" />
     </div>
   );
 }

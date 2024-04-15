@@ -16,7 +16,7 @@ function Vision({ overview }) {
     >
       <Heading caption={blueHeading} mainHead={mainHeading} />
       <Paragraph text={paragraphText} />
-      <PrimaryButton />
+      <PrimaryButton sectionEnquired="Vision" />
     </div>
   );
 }

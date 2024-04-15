@@ -40,10 +40,11 @@ function IconListContainer() {
           <IconWithLabel
             title={ICON.title}
             URL={`${BASE}${ICON.endPoint}${API}`}
+            key={ICON.endPoint}
           />
         ))}
       </div>
-      <PrimaryButton />
+      <PrimaryButton sectionEnquired="Value Added Services" />
     </div>
   );
 }

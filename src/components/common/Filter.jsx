@@ -78,7 +78,7 @@ function MyComponent() {
           </div>
         </div>
         <div className="flex flex-col">
-          <PrimaryButton />
+          <PrimaryButton sectionEnquired="Filter" />
         </div>
       </div>
     </div>

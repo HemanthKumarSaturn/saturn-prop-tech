@@ -76,11 +76,15 @@ function Amenities({ amenities }) {
       <div className="grid gap-4">
         <div className="grid grid-cols-5 gap-20">
           {ICONS.map((icon) => (
-            <Icon URL={`${BASE}${icon.endPoint}${API}`} title={icon.title} />
+            <Icon
+              URL={`${BASE}${icon.endPoint}${API}`}
+              title={icon.title}
+              key={icon.title}
+            />
           ))}
         </div>
       </div>
-      <PrimaryButton />
+      <PrimaryButton sectionEnquired="Amenities" />
     </div>
   );
 }

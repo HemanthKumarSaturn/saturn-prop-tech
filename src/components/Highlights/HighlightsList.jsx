@@ -43,13 +43,13 @@ function HighlightsList() {
     <div className="text-xl font-light text-black capitalize flex flex-col justify-between items-center h-96">
       <div className="flex flex-col gap-6">
         {featureItems.map((item, index) => (
-          <div className="flex flex-row gap-8 items-center">
+          <div className="flex flex-row gap-8 items-center" key={item.title}>
             <item.icon />
             <FeatureItem key={index}>{item.title}</FeatureItem>
           </div>
         ))}
       </div>
-      <PrimaryButton />
+      <PrimaryButton sectionEnquired="Highlights" />
     </div>
   );
 }

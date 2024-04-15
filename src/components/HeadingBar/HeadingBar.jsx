@@ -60,7 +60,7 @@ function HeadingBar({ overview, amenities, location, specification }) {
           <NavItem text="Specification" method={specification} />
           <ContactInfo />
         </nav>
-        <PrimaryButton />
+        <PrimaryButton sectionEnquired="Nav Bar" />
       </div>
     </div>
   );

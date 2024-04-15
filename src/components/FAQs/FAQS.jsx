@@ -81,6 +81,7 @@ function FAQList() {
             answer={faqData[0].answer}
             setFaqData={setFaqData}
             faqItem={item}
+            key={item.question}
           />
         ) : (
           <FaqItemShort

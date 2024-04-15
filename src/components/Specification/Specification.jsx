@@ -119,13 +119,13 @@ function Specifications({ specification }) {
         <div className="grid grid-rows-1 grid-cols-2">
           <div className="grid grid-cols-2 gap-4">
             {siteDevelopmentSpecs?.map((spec) => (
-              <Specification card={spec} />
+              <Specification card={spec} key={spec.title} />
             ))}
           </div>
           {/* <div className="bg-zinc-300 max-w-[1px] min-h-[313px]"></div> */}
           <div className="grid grid-cols-2 gap-4">
             {utilitiesSpecs?.map((spec) => (
-              <Specification card={spec} />
+              <Specification card={spec} key={spec.title} />
             ))}
           </div>
         </div>
