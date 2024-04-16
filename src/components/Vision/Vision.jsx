@@ -3,20 +3,19 @@ import PrimaryButton from "../common/PrimaryButton";
 import Heading from "../common/Heading";
 import Paragraph from "../common/Paragraph";
 
-function Vision({ overview }) {
-  const blueHeading = "An Uncompromising Vision";
-  const mainHeading = "Total Environment - Tangled Up In Green Plots";
-  const paragraphText =
-    "Escape the city’s clamor and rediscover serenity at Total Environment – Tangled Up In The Green.This exclusive property offers gated villa plots community in North Bangalore, meticulously craftedto be your sanctuary of peace amidst the verdant embrace of nature.Leave the city’s noise and pollution behind.";
+function Vision({ overview, jsonData }) {
+  const { fold2 } = jsonData;
+  const { heading, subHeading, body, cta } = fold2;
+
   return (
     <div
       className="flex flex-col items-center gap-y-7 mx-auto"
       style={{ width: "60.625rem" }}
       ref={overview}
     >
-      <Heading caption={blueHeading} mainHead={mainHeading} />
-      <Paragraph text={paragraphText} />
-      <PrimaryButton sectionEnquired="Vision" />
+      <Heading caption={heading} mainHead={subHeading} />
+      <Paragraph text={body} />
+      <PrimaryButton sectionEnquired="Vision" text={cta} />
     </div>
   );
 }

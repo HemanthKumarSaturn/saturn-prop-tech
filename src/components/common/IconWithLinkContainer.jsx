@@ -2,7 +2,7 @@ import * as React from "react";
 import IconWithLink from "./IconWithLink";
 import PrimaryButton from "./PrimaryButton";
 
-function IconWithLinkContainer() {
+function IconWithLinkContainer({ proximities, cta }) {
   return (
     <div
       style={{
@@ -15,17 +15,11 @@ function IconWithLinkContainer() {
         Key Directions
       </div>
       <div className="flex flex-col gap-2">
-        <IconWithLink />
-        <IconWithLink />
-        <IconWithLink />
-        {/* <IconWithLink />
-        <IconWithLink />
-        <IconWithLink />
-        <IconWithLink />
-        <IconWithLink />
-        <IconWithLink /> */}
+        {proximities?.slice(0, 5)?.map((proximity) => (
+          <IconWithLink proximity={proximity} />
+        ))}
       </div>
-      <PrimaryButton sectionEnquired="Location" />
+      <PrimaryButton sectionEnquired="Location" text={cta} />
     </div>
   );
 }

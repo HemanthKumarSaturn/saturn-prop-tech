@@ -11,7 +11,7 @@ const FeatureItem = ({ children }) => (
   <div className="font-semibold w-fit text-nowrap">{children}</div>
 );
 
-const featureItems = [
+let featureItems = [
   {
     title: "BMRDA Approved",
     icon: BMRDAIcon,
@@ -40,11 +40,19 @@ const featureItems = [
   {
     title: "Essential amenities",
     icon: EssentialsIcon,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. ",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
 ];
 
-function HighlightsList() {
+function HighlightsList({ highlightsListing, highlights, cta }) {
+  featureItems = featureItems.map((feature, index) => {
+    const highlight = {
+      ...feature,
+      desc: highlights[index],
+      title: highlightsListing[index],
+    };
+    return highlight;
+  });
   return (
     <div className="text-xl font-light text-black capitalize flex flex-col justify-between items-center h-96">
       <div className="flex flex-col gap-6">
@@ -61,7 +69,7 @@ function HighlightsList() {
           </div>
         ))}
       </div>
-      <PrimaryButton sectionEnquired="Highlights" />
+      <PrimaryButton sectionEnquired="Highlights" text={cta} />
     </div>
   );
 }

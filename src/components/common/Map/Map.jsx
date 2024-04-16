@@ -22,23 +22,23 @@ const createClusterCustomIcon = function (cluster) {
   });
 };
 
-// markers
-const markers = [
-  {
-    geocode: [13.1155, 77.607],
-    popUp: <IconWithLinkContainer />,
-  },
-  {
-    geocode: [13.025, 77.534],
-    popUp: <IconWithLinkContainer />,
-  },
-  {
-    geocode: [12.988, 77.6895],
-    popUp: <IconWithLinkContainer />,
-  },
-];
+export default function Map({ proximities, cta }) {
+  // markers
+  const markers = [
+    {
+      geocode: [13.1155, 77.607],
+      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
+    },
+    {
+      geocode: [13.025, 77.534],
+      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
+    },
+    {
+      geocode: [12.988, 77.6895],
+      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
+    },
+  ];
 
-export default function Map() {
   return (
     <div
       style={{

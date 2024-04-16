@@ -19,6 +19,7 @@ import Banner from "../components/Banner/Banner";
 import HeadingBar from "../components/HeadingBar/HeadingBar";
 import { useRef } from "react";
 import BannerVid from "../components/Banner/Bannervid";
+import jsonData from "../assets/data.json";
 
 function Home() {
   const overview = useRef(null);
@@ -33,25 +34,25 @@ function Home() {
         amenities={amenities}
         location={location}
         specification={specification}
+        jsonData={jsonData}
       />
       <div className="grid gap-8">
-        <BannerVid />
-        {/* <Filter /> */}
-        <Vision overview={overview} />
-        <Highlights />
+        <BannerVid jsonData={jsonData} />
+        <Vision overview={overview} jsonData={jsonData} />
+        <Highlights jsonData={jsonData} />
         {/* <Pricing /> */}
-        <Location location={location} />
-        <ValueAdded />
-        <Gallery />
-        <Ameneties amenities={amenities} />
-        <MasterPlan />
-        <Specifications specification={specification} />
-        <ExpertOpinion />
-        <FAQS />
-        <AboutBuilder />
-        <ProjectDetails />
-        <OtherProjects />
-        <Footer />
+        <Location location={location} jsonData={jsonData} />
+        <ValueAdded jsonData={jsonData} />
+        <Gallery jsonData={jsonData} />
+        <Ameneties amenities={amenities} jsonData={jsonData} />
+        <MasterPlan jsonData={jsonData} />
+        <Specifications specification={specification} jsonData={jsonData} />
+        <ExpertOpinion jsonData={jsonData} />
+        <FAQS jsonData={jsonData} />
+        <AboutBuilder jsonData={jsonData} />
+        <ProjectDetails jsonData={jsonData} />
+        <OtherProjects jsonData={jsonData} />
+        <Footer jsonData={jsonData} />
       </div>
     </div>
   );
