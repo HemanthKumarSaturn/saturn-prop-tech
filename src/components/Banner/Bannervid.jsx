@@ -1,5 +1,5 @@
 import React from "react";
-import BgVideo from "../../assets/gallery/videos/sampleVideo.mp4";
+import BgVideo from "../../assets/gallery/videos/banner-video.mp4";
 import "./Bannervid.css";
 import FilterUpdated from "../common/FilterUpdated";
 import BannerHead from "./BannerHead";
@@ -11,7 +11,7 @@ function Bannervid() {
   return (
     <div className="landingpage">
       <video src={BgVideo} autoPlay muted loop className="video-bg" />
-      <div className="bg-overlay"></div>
+      {/* <div className="bg-overlay"></div> */}
       <div
         style={{
           display: "flex",

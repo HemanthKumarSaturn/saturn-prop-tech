@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const InfoCard = ({ icon, title, value }) => {
   return (
@@ -22,7 +23,7 @@ const InfoCard = ({ icon, title, value }) => {
 
 const PriceCard = ({ icon, title, value }) => {
   return (
-    <div className="flex flex-col justify-center items-center bg-white rounded-2xl shadow-sm ">
+    <div className="flex flex-col justify-center items-center bg-white rounded shadow-sm ">
       <div className="flex items-center justify-center w-fit gap-x-2 p-3">
         <div className="flex flex-col justify-center items-center bg-white bg-opacity-0">
           <img src={icon} alt="" className="w-11 aspect-[0.98]" />
@@ -66,6 +67,7 @@ const FilterUpdated = () => {
     },
   ];
   const sectionEnquired = "Filter";
+  const navigate = useNavigate();
 
   return (
     <div
@@ -93,13 +95,13 @@ const FilterUpdated = () => {
           value={card.value}
         />
       ))}
-      <button
-        className="justify-center px-5 py-4 my-auto text-2xl font-medium leading-8 text-white border border-solid bg-neutral-900 border-zinc-500"
+      <div
+        className="justify-center px-5 py-4 my-auto text-2xl font-medium leading-8 text-white border border-solid bg-neutral-900 border-zinc-500 hover:cursor-pointer"
         type="button"
         onClick={() => navigate("/contact-us", { state: { sectionEnquired } })}
       >
         Enquire Now
-      </button>
+      </div>
     </div>
   );
 };

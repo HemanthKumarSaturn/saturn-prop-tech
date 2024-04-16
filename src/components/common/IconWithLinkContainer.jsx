@@ -11,7 +11,7 @@ function IconWithLinkContainer() {
       }}
       className="bg-white rounded-3xl flex flex-col gap-4 items-center"
     >
-      <div className="text-2xl font-bold leading-8 text-black max-w-[165px]">
+      <div className="text-2xl font-bold leading-8 text-black self-center">
         Key Directions
       </div>
       <div className="flex flex-col gap-2">
