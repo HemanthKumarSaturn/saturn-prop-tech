@@ -30,11 +30,11 @@ const markers = [
   },
   {
     geocode: [13.025, 77.534],
-    popUp: "Hello, I am pop up 2",
+    popUp: <IconWithLinkContainer />,
   },
   {
     geocode: [12.988, 77.6895],
-    popUp: "Hello, I am pop up 3",
+    popUp: <IconWithLinkContainer />,
   },
 ];
 

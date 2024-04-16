@@ -6,8 +6,8 @@ function IconWithLinkContainer() {
   return (
     <div
       style={{
-        height: "510px",
-        width: "420px",
+        height: "fit-content",
+        width: "100%",
       }}
       className="bg-white rounded-3xl flex flex-col gap-4 items-center"
     >
@@ -18,12 +18,12 @@ function IconWithLinkContainer() {
         <IconWithLink />
         <IconWithLink />
         <IconWithLink />
+        {/* <IconWithLink />
         <IconWithLink />
         <IconWithLink />
         <IconWithLink />
         <IconWithLink />
-        <IconWithLink />
-        <IconWithLink />
+        <IconWithLink /> */}
       </div>
       <PrimaryButton sectionEnquired="Location" />
     </div>
