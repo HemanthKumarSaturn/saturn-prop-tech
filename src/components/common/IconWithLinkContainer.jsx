@@ -6,9 +6,6 @@ function IconWithLinkContainer() {
   return (
     <div
       style={{
-        position: "absolute",
-        bottom: "12px",
-        right: "39px",
         height: "510px",
         width: "420px",
       }}

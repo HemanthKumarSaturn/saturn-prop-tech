@@ -23,12 +23,13 @@ function NavItem({ text, method }) {
 }
 
 function ContactInfo() {
+  const callToolTip = "Contact this number for instant support";
   return (
     <div
       className="flex gap-1.5 self-start font-semibold text-black hover:cursor-pointer"
       data-tooltip-id="call-tooltip"
-      data-tooltip-content="Call this number for instant support"
       data-tooltip-place="left"
+      data-tooltip-html={`<div style="width: 15rem">${callToolTip}</div>`}
     >
       <img
         loading="lazy"
@@ -37,7 +38,7 @@ function ContactInfo() {
         className="shrink-0 aspect-square w-[25px]"
       />
       <div>+91 95605 09669</div>
-      <Tooltip id="call-tooltip" />
+      <Tooltip id="call-tooltip" type="light" />
     </div>
   );
 }

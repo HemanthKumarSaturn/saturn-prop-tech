@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const TextContent = ({ title, description }) => (
   <>
@@ -62,7 +63,18 @@ function ContactUs() {
         "http://localhost:5000/api/addEnquiry",
         payload
       );
-      console.log({ response });
+      setTimeout(function () {
+        Swal(
+          {
+            title: "Wow!",
+            text: "Message!",
+            type: "success",
+          },
+          function () {
+            window.location = "redirectURL";
+          }
+        );
+      }, 1000);
     } catch (err) {
       console.error(err);
     }

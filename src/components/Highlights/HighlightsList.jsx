@@ -15,26 +15,32 @@ const featureItems = [
   {
     title: "BMRDA Approved",
     icon: BMRDAIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
   {
     title: "RERA Approved",
     icon: ReraIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
   {
     title: "Prime Location",
     icon: PrimeIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
   {
     title: "115 Acre Township",
     icon: TownShipIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
   {
     title: "Upcoming tech parks",
     icon: UpcomingIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
   },
   {
     title: "Essential amenities",
     icon: EssentialsIcon,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. ",
   },
 ];
 
@@ -43,7 +49,13 @@ function HighlightsList() {
     <div className="text-xl font-light text-black capitalize flex flex-col justify-between items-center h-96">
       <div className="flex flex-col gap-6">
         {featureItems.map((item, index) => (
-          <div className="flex flex-row gap-8 items-center" key={item.title}>
+          <div
+            className="flex flex-row gap-8 items-center cursor-pointer"
+            data-tooltip-id="call-tooltip"
+            data-tooltip-html={`<div style="width: 15rem">${item?.desc}</div>`}
+            data-tooltip-place="left"
+            key={item.title}
+          >
             <item.icon />
             <FeatureItem key={index}>{item.title}</FeatureItem>
           </div>

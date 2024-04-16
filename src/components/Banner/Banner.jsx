@@ -17,13 +17,23 @@ function Banner() {
         width: "100%",
         // backgroundRepeat: "no-repeat",
       }}
-      className="flex flex-col items-baseline px-20 justify-center"
+      className="flex flex-col items-baseline px-20 justify-between pt-20"
     >
+      {/* <div style={{ alignSelf: "flex-end" }}>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/y881t8ilMyc"
+          frameborder="2"
+          allowfullscreen
+        />
+      </div> */}
       <div className="flex flex-col gap-6 items-baseline">
         <BannerCaption />
         <BannerHead />
         <PrimaryButton sectionEnquired="Banner" />
       </div>
+      <Filter />
     </div>
   );
 }

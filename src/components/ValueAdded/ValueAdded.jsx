@@ -11,7 +11,7 @@ function ValueAdded() {
   const headerText = "Unveiling the Added Value at - Tangled Up In Green ";
   const blueText = "Beyond the Plots";
   const para =
-    "Owning a plot at Tangled Up In Green, a meticulously crafted development by Total Environment, offers more than just a piece of land. Here’s what sets Tangled Up In Green apart: Read More.";
+    "Owning a plot at Tangled Up In Green, a meticulously crafted development by Total Environment, offers more than just a piece of land. Here’s what sets Tangled Up In Green apart:";
 
   return (
     <div

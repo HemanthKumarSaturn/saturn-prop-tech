@@ -1,6 +1,10 @@
 import * as React from "react";
+import Paragraph2 from "../common/Paragraph2";
 
 function AboutBuilder() {
+  const paraText =
+    "Over two decades later, Total Environment has delivered more than 4 million square feet to over 1,200 customers across dozens of projects in Bangalore, Hyderabad and Pune. While these numbers demonstrate their scale of operations and our ability to influence modern housing, they only tell one side of the story. What truly moves and inspires Total Environment is the love for design and the joy of giving people a place to proudly call home.";
+
   return (
     <div
       className="flex flex-col px-11 pt-12 pb-6 rounded-2xl bg-gray-200 bg-opacity-40 max-md:px-5"
@@ -20,22 +24,7 @@ function AboutBuilder() {
                 Total Environment was founded <br />
                 by Kamal Sagar.
               </div>
-              <div className="mt-8 leading-6 max-md:max-w-full">
-                <span>
-                  Over two decades later, Total Environment has delivered more
-                  than 4 million square feet to over 1,200 customers across
-                  dozens of projects in Bangalore, Hyderabad and Pune. While
-                  these numbers demonstrate their scale of operations and our
-                  ability to influence modern housing, they only tell one side
-                  of the story. What truly moves and inspires Total Environment
-                  is the love for design and the joy of giving people a place to
-                  proudly call home.
-                </span>{" "}
-                <span className="text-xs text-indigo-600 underline">
-                  Read More
-                </span>
-                .
-              </div>
+              <Paragraph2 text={paraText} />
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[45%] max-md:ml-0 max-md:w-full">

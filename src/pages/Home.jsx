@@ -18,6 +18,7 @@ import BannerImage from "../components/Banner/BannerImage";
 import Banner from "../components/Banner/Banner";
 import HeadingBar from "../components/HeadingBar/HeadingBar";
 import { useRef } from "react";
+import BannerVid from "../components/Banner/Bannervid";
 
 function Home() {
   const overview = useRef(null);
@@ -34,7 +35,7 @@ function Home() {
         specification={specification}
       />
       <div className="grid gap-8">
-        <Banner />
+        <BannerVid />
         {/* <Filter /> */}
         <Vision overview={overview} />
         <Highlights />

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function MyComponent() {
+function Eclipse() {
   return (
     <div className="flex justify-center items-center px-8 rounded-full shadow-sm h-[182px] w-[182px]">
       <img
@@ -12,4 +12,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default Eclipse;

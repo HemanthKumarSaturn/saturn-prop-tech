@@ -2,16 +2,16 @@ import * as React from "react";
 import PrimaryButton from "./PrimaryButton";
 
 const PropertyDetail = ({ detail, icon }) => (
-  <div className="flex flex-col justify-center p-3 bg-white rounded-2xl shadow-sm">
-    <div className="flex gap-2">
-      <div className="flex justify-center items-center px-1.5 w-14 h-14 bg-white bg-opacity-0">
+  <div className="flex flex-col justify-center bg-white rounded-2xl shadow-sm">
+    <div className="flex items-center justify-center w-fit gap-x-2 p-3">
+      <div className="flex justify-center items-center bg-white bg-opacity-0">
         <img src={icon} alt="" className="aspect-square w-[45px]" />
       </div>
-      <div className="flex flex-col self-start mt-1.5 leading-[140%]">
-        <div className="justify-center px-2 py-2 text-sm bg-white bg-opacity-0 text-black text-opacity-80">
+      <div className="flex flex-col self-start">
+        <div className="justify-center text-sm bg-white bg-opacity-0 text-black text-opacity-80">
           {detail.label}
         </div>
-        <div className="justify-center px-6 py-2 mt-1 text-base font-semibold text-black bg-white bg-opacity-0 max-md:px-5">
+        <div className="justify-center text-base font-semibold text-black bg-white bg-opacity-0">
           {detail.value}
         </div>
       </div>
@@ -20,16 +20,16 @@ const PropertyDetail = ({ detail, icon }) => (
 );
 
 const PriceDetail = ({ detail, icon }) => (
-  <div className="flex flex-col justify-center p-3 bg-white rounded-2xl shadow-sm">
-    <div className="flex gap-0">
-      <div className="flex flex-col justify-center items-start py-1.5 bg-white bg-opacity-0">
+  <div className="flex flex-col justify-center items-center bg-white rounded-2xl shadow-sm ">
+    <div className="flex items-center justify-center w-fit gap-x-2 p-3">
+      <div className="flex flex-col justify-center items-center bg-white bg-opacity-0">
         <img src={icon} alt="" className="w-11 aspect-[0.98]" />
       </div>
-      <div className="flex flex-col self-start mt-1.5 leading-[140%]">
-        <div className="justify-center px-7 py-2 text-sm bg-white bg-opacity-0 text-black text-opacity-80 max-md:px-5">
+      <div className="flex flex-col self-start">
+        <div className="justify-center text-sm bg-white bg-opacity-0 text-black text-opacity-80">
           {detail.label}
         </div>
-        <div className="justify-center px-1 py-1.5 mt-1 text-base font-semibold text-black bg-white bg-opacity-0">
+        <div className="justify-center text-base font-semibold text-black bg-white bg-opacity-0">
           {detail.value}
         </div>
       </div>
@@ -65,10 +65,16 @@ function MyComponent() {
   ];
 
   return (
-    <div className="justify-center rounded-t-3xl bg-zinc-100">
-      <div className="flex gap-5">
-        <div className="flex flex-col">
-          <div className="flex grow gap-5 justify-between">
+    <div
+      className="justify-center rounded-t-3xl bg-zinc-100"
+      style={{ width: "85vw" }}
+    >
+      <div className="flex gap-5 items-center justify-center">
+        <div
+          className="flex flex-col items-center justify-center"
+          style={{ height: "7rem" }}
+        >
+          <div className="flex grow gap-5 justify-between items-center">
             {propertyDetails.map((detail, index) => (
               <PropertyDetail key={index} detail={detail} icon={detail.icon} />
             ))}

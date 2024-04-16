@@ -1,6 +1,20 @@
 import * as React from "react";
+import green01 from "../../assets/gallery/images/green01.jpg";
+import Carousel from "../common/Carousel";
+import BackGateImage from "../../assets/gallery/images/backgate.jpeg";
+import CentralBoulevard from "../../assets/gallery/images/centralyeard.jpeg";
+import DrivewayImage from "../../assets/gallery/images/driveaway.jpeg";
+import StreetViewImage from "../../assets/gallery/images/streetscape.jpeg";
+import StreetscapeImage from "../../assets/gallery/images/streetview.jpg";
 
 function Gallery() {
+  const slides = [
+    BackGateImage,
+    CentralBoulevard,
+    DrivewayImage,
+    StreetViewImage,
+    StreetscapeImage,
+  ];
   return (
     <div className="flex flex-col items-center gap-y-7">
       <div className="text-4xl font-bold text-black">
@@ -14,12 +28,9 @@ function Gallery() {
           Project Walkthrough
         </div>
       </div>
-      <img
-        loading="lazy"
-        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f406abe3349c4bc9a1e8a58cced49a6a4a518a4a18a92493c06076612770c602?apiKey=6d29d163b59344eda42474c42f65e83e&"
-        className="aspect-[2.27]"
-        style={{ width: "70%" }}
-      />
+      <div className="w-[75%] m-auto">
+        <Carousel slides={slides} />
+      </div>
     </div>
   );
 }
