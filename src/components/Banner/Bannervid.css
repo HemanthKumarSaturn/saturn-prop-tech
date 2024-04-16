@@ -46,7 +46,7 @@
     align-items: center;
     z-index: 1;
 }
-
+/* 
 .menu {
     height: 3em;
     width: 4em;
@@ -77,11 +77,6 @@
     z-index: 2;
 }
 
-h1 {
-    font-size: 6em;
-    animation-name: fade;
-    animation-duration: 4s;
-}
 
 p {
     justify-self: flex-end;
@@ -103,7 +98,7 @@ p {
 }
 
 /* ---------- Animation --------------- */
-@keyframes fade {
+/* @keyframes fade {
     0% {
         opacity: 0;
         margin-left: 3em;
@@ -111,4 +106,4 @@ p {
     100% {
         opacity: 1;
     }
-}
+} */ 
