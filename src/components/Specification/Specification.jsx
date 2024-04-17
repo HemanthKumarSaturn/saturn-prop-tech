@@ -104,7 +104,7 @@ function Specifications({ specification }) {
   ];
   return (
     <div
-      className="flex flex-col items-center gap-y-7 justify-center"
+      className="flex flex-col items-center gap-y-11 justify-center"
       style={{ width: "74rem", margin: "0px auto" }}
       ref={specification}
     >

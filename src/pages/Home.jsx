@@ -20,6 +20,7 @@ import HeadingBar from "../components/HeadingBar/HeadingBar";
 import { useRef } from "react";
 import BannerVid from "../components/Banner/Bannervid";
 import jsonData from "../assets/data.json";
+import NewFAQ from "../components/FAQs/NewFAQ";
 
 function Home() {
   const overview = useRef(null);
@@ -49,6 +50,7 @@ function Home() {
         <Specifications specification={specification} jsonData={jsonData} />
         <ExpertOpinion jsonData={jsonData} />
         <FAQS jsonData={jsonData} />
+        {/* <NewFAQ /> */}
         <AboutBuilder jsonData={jsonData} />
         <ProjectDetails jsonData={jsonData} />
         <OtherProjects jsonData={jsonData} />

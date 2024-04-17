@@ -3,11 +3,14 @@ import Head from "../common/Head";
 import Icon from "../common/Icon";
 import PrimaryButton from "../common/PrimaryButton";
 import HeadWithPara from "../common/HeadWithPara";
+import { icons } from "feather-icons";
 
-function Amenities({ amenities }) {
+function Amenities({ amenities, jsonData }) {
   const BASE = "https://cdn.builder.io/api/v1/image/assets/TEMP/";
   const API = "?apiKey=6d29d163b59344eda42474c42f65e83e&";
-  const ICONS = [
+  const { fold6 } = jsonData;
+  // const { amenities, cta } = fold6;
+  let ICONS = [
     {
       endPoint:
         "bc611c0d3afbf1b0db34e1a657ae551c99c49ff440eafe4a0cf817c1923269ca",
@@ -70,7 +73,9 @@ function Amenities({ amenities }) {
     },
   ];
   const headerText = "Tangled Up in Green - Amenities";
-
+  // icons = icons.map((icon) => {
+  //   const ico = {..icon, }
+  // });
   return (
     <div
       className="flex flex-col items-center gap-20 justify-center rounded-lg"

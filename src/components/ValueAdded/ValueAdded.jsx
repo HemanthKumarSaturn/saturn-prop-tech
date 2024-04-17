@@ -7,32 +7,30 @@ import IconListContainer from "../IconListContainer";
 import HeadWithPara from "../common/HeadWithPara";
 import Heading from "../common/Heading";
 
-function ValueAdded() {
-  const headerText = "Unveiling the Added Value at - Tangled Up In Green ";
+function ValueAdded({ jsonData }) {
   const blueText = "Beyond the Plots";
-  const para =
-    "Owning a plot at Tangled Up In Green, a meticulously crafted development by Total Environment, offers more than just a piece of land. Here’s what sets Tangled Up In Green apart:";
-
+  const { fold5 } = jsonData;
+  const { heading, body, why, qualities } = fold5;
   return (
     <div
-      className="flex flex-col gap-y-7 items-center justify-center rounded-lg"
+      className="flex flex-col gap-y-11 items-center justify-center rounded-lg"
       style={{
         background: "#F4F4F4",
-        height: "42rem",
+        height: "48rem",
         width: "74rem",
         margin: "0px auto",
       }}
     >
       <Heading caption={blueText} mainHead="" />
-      <HeadWithPara text={headerText} />
+      <HeadWithPara text={heading} />
       <div style={{ width: "58rem" }}>
-        <Paragraph text={para} />
+        <Paragraph text={body} />
       </div>
       <div
         className="flex w-full justify-between items-center"
         style={{ width: "58rem" }}
       >
-        <IconListContainer />
+        <IconListContainer qualities={qualities} />
         <div style={{ width: "40rem", height: "25rem" }}>
           <img
             loading="lazy"

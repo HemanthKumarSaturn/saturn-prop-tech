@@ -10,7 +10,7 @@ function Location({ location, jsonData }) {
   const headerText = "Tangled Up in Green - Location";
   return (
     <div
-      className="flex flex-col mx-auto justify-around gap-y-7 items-center rounded-lg"
+      className="flex flex-col mx-auto justify-around gap-y-11 items-center rounded-lg"
       style={{ position: "relative", width: "74rem", margin: "0px auto" }}
       ref={location}
     >

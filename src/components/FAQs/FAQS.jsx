@@ -1,8 +1,11 @@
 import * as React from "react";
-import { Plus } from "react-feather";
+import { Plus, XCircle } from "react-feather";
 
-function FAQList() {
-  const initialFaqData = [
+function FAQList({ jsonData }) {
+  const { faqs } = jsonData;
+  // console.log({ faqs });
+  const { heading, faqList } = faqs;
+  let initialFaqData = [
     {
       question: "Where is Tangled Up In Green located?",
       answer:
@@ -57,6 +60,14 @@ function FAQList() {
       isOpened: false,
     },
   ];
+  initialFaqData = initialFaqData.map((faq, index) => {
+    const faqUpdated = {
+      ...faq,
+      question: faqList[index].ques,
+      answer: faqList[index].ans,
+    };
+    return faqUpdated;
+  });
   const [faqData, setFaqData] = React.useState(initialFaqData);
   return (
     <div
@@ -71,27 +82,30 @@ function FAQList() {
       }}
     >
       <h1 className="self-center text-4xl font-bold text-black leading-[51.8px] max-md:max-w-full">
-        Tangled Up in Green - Frequent Ask Questions
+        {heading}
       </h1>
-      {faqData.map((item, index) =>
-        item?.isOpened ? (
-          <FaqItem
-            index={index + 1}
-            question={faqData[0].question}
-            answer={faqData[0].answer}
-            setFaqData={setFaqData}
-            faqItem={item}
-            key={item.question}
-          />
-        ) : (
+      {faqData.map(
+        (item, index) => (
+          // item?.isOpened ? (
+          //   <FaqItem
+          //     index={index + 1}
+          //     question={faqData[0].question}
+          //     answer={faqData[0].answer}
+          //     setFaqData={setFaqData}
+          //     faqItem={item}
+          //     key={item.question}
+          //   />
+          // ) : (
           <FaqItemShort
             key={index}
             index={index + 1}
             question={item.question}
             faqItem={item}
             setFaqData={setFaqData}
+            answer={item.answer}
           />
         )
+        // )
       )}
     </div>
   );
@@ -146,7 +160,7 @@ function FaqItem({ index, question, answer, setFaqData, faqItem }) {
   );
 }
 
-function FaqItemShort({ index, question, setFaqData, faqItem }) {
+function FaqItemShort({ index, question, setFaqData, faqItem, answer }) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleOpen = () => {
@@ -157,16 +171,39 @@ function FaqItemShort({ index, question, setFaqData, faqItem }) {
 
   return (
     <div
-      className="flex gap-5 px-12 py-5 mt-1.5 bg-purple-50 max-md:flex-wrap max-md:px-5 max-md:max-w-full w-full cursor-pointer"
+      className="flex gap-5 px-12 py-5 mt-1.5 bg-purple-50 max-md:flex-wrap max-md:px-5 max-md:max-w-full w-full cursor-pointer justify-between hover:bg-gray-300"
       onClick={toggleOpen}
     >
-      <div className="text-3xl font-bold tracking-wide leading-9 text-zinc-400">
-        {index.toString().padStart(2, "0")}
+      <div
+        style={{
+          display: "flex",
+          minWidth: "30rem",
+          gap: "1rem",
+          // justifyContent: "space-between",
+        }}
+      >
+        <div className="text-3xl font-bold tracking-wide leading-9 text-zinc-400">
+          {index.toString().padStart(2, "0")}
+        </div>
+        <div
+          className="flex flex-col justify-between"
+          style={{ minHeight: isOpen ? "5rem" : "0px", gap: "1rem" }}
+        >
+          <h2 className="flex-1 text-2xl font-medium leading-8 text-black max-md:max-w-full text-left">
+            {question}
+          </h2>
+          {isOpen && (
+            <div className="text-xl font-normal" style={{ maxWidth: "55rem" }}>
+              {answer}
+            </div>
+          )}
+        </div>
       </div>
-      <h2 className="flex-1 text-2xl font-medium leading-8 text-black max-md:max-w-full text-left">
-        {question}
-      </h2>
-      <Plus color="black" size={38} />
+      {isOpen ? (
+        <XCircle color="black" size={38} />
+      ) : (
+        <Plus color="black" size={38} />
+      )}
     </div>
   );
 }

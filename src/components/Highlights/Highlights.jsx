@@ -29,7 +29,7 @@ function Highlights({ jsonData }) {
 
   return (
     <div
-      className="flex flex-col mx-auto justify-center gap-y-7 items-center"
+      className="flex flex-col mx-auto justify-center gap-y-11 items-center"
       style={{
         borderRadius: "10px",
         background: "rgba(212, 214, 215, 0.19)",

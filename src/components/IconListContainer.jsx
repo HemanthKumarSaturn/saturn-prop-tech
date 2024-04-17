@@ -2,10 +2,10 @@ import * as React from "react";
 import IconWithLabel from "./common/IconWithLabel";
 import PrimaryButton from "./common/PrimaryButton";
 
-function IconListContainer() {
+function IconListContainer({ qualities }) {
   const BASE = "https://cdn.builder.io/api/v1/image/assets/TEMP/";
   const API = "?apiKey=6d29d163b59344eda42474c42f65e83e&";
-  const ICON_LIST = [
+  let ICON_LIST = [
     {
       title: "Intimate Clusters",
       endPoint:
@@ -37,7 +37,14 @@ function IconListContainer() {
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat!",
     },
   ];
-
+  ICON_LIST = ICON_LIST.map((ICON, index) => {
+    const icon = {
+      ...ICON,
+      title: qualities[index].quality,
+      desc: qualities[index].desc,
+    };
+    return icon;
+  });
   return (
     <div className="flex flex-col justify-between items-center h-72">
       <div className="flex flex-col font-semibold leading-7 text-black gap-4 items-baseline">
@@ -50,7 +57,10 @@ function IconListContainer() {
           />
         ))}
       </div>
-      <PrimaryButton sectionEnquired="Value Added Services" />
+      <PrimaryButton
+        sectionEnquired="Value Added Services"
+        text="Enquire Now"
+      />
     </div>
   );
 }
