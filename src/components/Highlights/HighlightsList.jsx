@@ -60,7 +60,7 @@ function HighlightsList({ highlightsListing, highlights, cta }) {
           <div
             className="flex flex-row gap-8 items-center cursor-pointer"
             data-tooltip-id="call-tooltip"
-            data-tooltip-html={`<div style="width: 15rem">${item?.desc}</div>`}
+            data-tooltip-html={`<p style="width: 18rem; font-weight: 200">${item?.desc}</p>`}
             data-tooltip-place="left"
             key={item.title}
           >
@@ -68,8 +68,10 @@ function HighlightsList({ highlightsListing, highlights, cta }) {
             <FeatureItem key={index}>{item.title}</FeatureItem>
           </div>
         ))}
+        <div className="w-48 flex justify-center items-center">
+          <PrimaryButton sectionEnquired="Highlights" text={cta} />
+        </div>
       </div>
-      <PrimaryButton sectionEnquired="Highlights" text={cta} />
     </div>
   );
 }

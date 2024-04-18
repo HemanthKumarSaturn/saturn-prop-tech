@@ -46,7 +46,7 @@ function IconListContainer({ qualities }) {
     return icon;
   });
   return (
-    <div className="flex flex-col justify-between items-center h-72">
+    <div className="flex flex-col justify-center items-center h-72">
       <div className="flex flex-col font-semibold leading-7 text-black gap-4 items-baseline">
         {ICON_LIST.map((ICON) => (
           <IconWithLabel
@@ -57,10 +57,6 @@ function IconListContainer({ qualities }) {
           />
         ))}
       </div>
-      <PrimaryButton
-        sectionEnquired="Value Added Services"
-        text="Enquire Now"
-      />
     </div>
   );
 }

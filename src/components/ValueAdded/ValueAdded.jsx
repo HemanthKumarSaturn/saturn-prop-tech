@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BlueHeader from "../common/BlueHeader";
 import StrongHeader from "../common/StrongHeader";
 import Paragraph from "../common/Paragraph";
@@ -6,31 +6,54 @@ import Head from "../common/Head";
 import IconListContainer from "../IconListContainer";
 import HeadWithPara from "../common/HeadWithPara";
 import Heading from "../common/Heading";
+import ParagraphNoReadMore from "../common/ParagraphWithoutReadMore";
+import FeaturesList from "../common/Bullet";
 
 function ValueAdded({ jsonData }) {
+  const [isReadMore, setIsReadMore] = useState(true);
+
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
   const blueText = "Beyond the Plots";
-  const { fold5 } = jsonData;
+  const { fold5, fold6 } = jsonData;
   const { heading, body, why, qualities } = fold5;
+  const { amenities } = fold6;
   return (
     <div
-      className="flex flex-col gap-y-11 items-center justify-center rounded-lg"
+      className="flex flex-col gap-y-11 items-center rounded-lg"
       style={{
         background: "#F4F4F4",
-        height: "48rem",
+        // height: "48rem",
         width: "74rem",
         margin: "0px auto",
+        padding: "3rem 0",
       }}
     >
       <Heading caption={blueText} mainHead="" />
       <HeadWithPara text={heading} />
-      <div style={{ width: "58rem" }}>
-        <Paragraph text={body} />
+      <div style={{ width: "60.625rem" }} className="inline">
+        <ParagraphNoReadMore
+          text={body}
+          isReadMore={isReadMore}
+          toggleReadMore={toggleReadMore}
+          isFirst={true}
+        />
+        {!isReadMore && <ParagraphNoReadMore text={why} />}
+        {!isReadMore && (
+          <FeaturesList
+            qualities={qualities}
+            isReadMore={isReadMore}
+            toggleReadMore={toggleReadMore}
+            isFirst={false}
+          />
+        )}
       </div>
       <div
         className="flex w-full justify-between items-center"
         style={{ width: "58rem" }}
       >
-        <IconListContainer qualities={qualities} />
+        <IconListContainer qualities={amenities} />
         <div style={{ width: "40rem", height: "25rem" }}>
           <img
             loading="lazy"

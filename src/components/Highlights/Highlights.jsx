@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import highlightImg from "../../assets/images/highlights.png";
 import shakeHandIcon from "../../assets/icons/shakeHand.png";
 import apartmentIcon from "../../assets/icons/apartment.png";
@@ -10,10 +10,11 @@ import PrimaryButton from "../common/PrimaryButton";
 import HeadWithPara from "../common/HeadWithPara";
 import Paragraph from "../common/Paragraph";
 import HighlightsList from "./HighlightsList";
+import ParagraphNoReadMore from "../common/ParagraphWithoutReadMore";
 
 function Highlights({ jsonData }) {
   const { fold2, fold3 } = jsonData;
-  const { heading2, body2, highlights } = fold2;
+  const { heading2, body2p1, body2p2, highlights } = fold2;
   const { highlightsListing, cta } = fold3;
   const mainHead = "Tangled Up in Green - Highlights";
   const paragraph =
@@ -26,20 +27,40 @@ function Highlights({ jsonData }) {
     apartmentIcon,
     connectionIcon,
   ];
+  const [isReadMore, setIsReadMore] = useState(true);
 
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
   return (
     <div
-      className="flex flex-col mx-auto justify-center gap-y-11 items-center"
+      className="flex flex-col mx-auto gap-y-11 items-center"
       style={{
         borderRadius: "10px",
         background: "rgba(212, 214, 215, 0.19)",
         width: "94%",
-        height: "42rem",
+        // minHeight: "46rem",
+        justifyContent: "center",
+        padding: "4rem 0",
       }}
     >
       <HeadWithPara text={heading2} />
-      <div style={{ width: "60.625rem" }}>
-        <Paragraph text={body2} />
+      <div style={{ width: "60.625rem" }} className="inline">
+        <ParagraphNoReadMore
+          text={body2p1}
+          isReadMore={isReadMore}
+          toggleReadMore={toggleReadMore}
+          isFirst={true}
+        />
+        {!isReadMore && (
+          <ParagraphNoReadMore
+            text={body2p2}
+            isReadMore={isReadMore}
+            toggleReadMore={toggleReadMore}
+            isFirst={false}
+          />
+        )}
+        {/* <Paragraph text={body2} /> */}
       </div>
       <div
         className="flex flex-row items-center gap-8 h-96 justify-start"

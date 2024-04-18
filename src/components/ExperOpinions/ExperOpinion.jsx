@@ -1,7 +1,9 @@
 import * as React from "react";
 import HeadWithPara from "../common/HeadWithPara";
 
-function ExpertOpinion() {
+function ExpertOpinion({ jsonData }) {
+  const { fold10 } = jsonData;
+  const { leftSide, pros, rightSide, cons } = fold10;
   const headingText = "Expert Opinions on TE Tangled up in Green Plots";
   return (
     <div
@@ -20,14 +22,45 @@ function ExpertOpinion() {
             <div className="flex flex-col grow px-9 pb-16 text-white whitespace-nowrap border border-black border-solid leading-[51.8px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <div
                 className="z-10 justify-center  text-4xl font-bold items-center px-16 py-3.5 mx-7 -mt-4 bg-teal-500 rounded-xl shadow-sm max-md:px-5 max-md:mx-2.5"
-                style={{ padding: "0px 94px" }}
+                style={{
+                  padding: "0px 94px",
+                  justifyContent: "center",
+                  display: "flex",
+                  alignItems: "center",
+                }}
               >
-                PROS
+                {leftSide}
               </div>
-              <div className="shrink-0 mt-14 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:mt-10 max-md:max-w-full" />
-              <div className="shrink-0 mt-7 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
-              <div className="shrink-0 mt-3.5 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
-              <div className="shrink-0 mt-5 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "1rem",
+                  alignItems: "center",
+                  padding: "1rem 0",
+                }}
+              >
+                {pros?.map((pro) => (
+                  <div
+                    style={{
+                      border: "1px solid black",
+                    }}
+                  >
+                    <p
+                      className="text-black"
+                      style={{
+                        width: "100%",
+                        textWrap: "pretty",
+                        lineHeight: "normal",
+                        padding: "1rem",
+                      }}
+                    >
+                      {pro}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
@@ -36,12 +69,44 @@ function ExpertOpinion() {
                 className="z-10 justify-center  text-4xl font-bold items-center px-16 py-3.5 mx-7 -mt-4 bg-red-500 rounded-xl shadow-sm max-md:px-5 max-md:mx-2.5"
                 style={{ padding: "0px 94px" }}
               >
-                CONS
+                {rightSide}
               </div>
-              <div className="shrink-0 mt-14 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:mt-10 max-md:max-w-full" />
-              <div className="shrink-0 mt-7 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
-              <div className="shrink-0 mt-3.5 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
-              <div className="shrink-0 mt-5 rounded-3xl border border-grey-900 border-solid shadow-sm h-[92px] max-md:max-w-full" />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "1rem",
+                  alignItems: "center",
+                  padding: "1rem 0",
+                }}
+              >
+                {pros?.map((pro) => (
+                  <div
+                    style={{
+                      borderRadius: "20px",
+                      border: "1px solid #000",
+                      // opacity: 0.2,
+                      boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+                      // #000000
+                    }}
+                    // className="rounded-2xl"
+                  >
+                    <p
+                      className="text-black"
+                      style={{
+                        width: "100%",
+                        textWrap: "pretty",
+                        lineHeight: "normal",
+                        padding: "1rem",
+                        // opacity:
+                      }}
+                    >
+                      {pro}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

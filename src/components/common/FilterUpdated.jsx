@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import PrimaryButton from "./PrimaryButton";
 
 const InfoCard = ({ icon, title, value }) => {
   return (
@@ -95,12 +96,8 @@ const FilterUpdated = () => {
           value={card.value}
         />
       ))}
-      <div
-        className="justify-center px-5 py-4 my-auto text-2xl font-medium leading-8 text-white border border-solid bg-neutral-900 border-zinc-500 hover:cursor-pointer"
-        type="button"
-        onClick={() => navigate("/contact-us", { state: { sectionEnquired } })}
-      >
-        Enquire Now
+      <div className="flex justify-center items-center w-[17rem]">
+        <PrimaryButton text="SCHEDULE SITE VISIT" />
       </div>
     </div>
   );

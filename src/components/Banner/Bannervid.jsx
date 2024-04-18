@@ -5,6 +5,7 @@ import FilterUpdated from "../common/FilterUpdated";
 // import BannerHead from "./BannerHead";
 import Head from "../common/Head";
 import BannerCaption from "./BannerCaption";
+import BannerCaption2 from "./BannerCaption2";
 import BannerHead from "./BannerHead";
 import PrimaryButton from "../common/PrimaryButton";
 
@@ -22,11 +23,12 @@ function Bannervid({ jsonData }) {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "baseline",
-          gap: "8rem",
+          gap: "4rem",
         }}
       >
-        <div className="flex flex-col gap-6 items-baseline">
-          <BannerCaption text={title} />
+        <div className="flex flex-col gap-6 items-center ">
+          <BannerCaption text={title.slice(0, 17)} />
+          <BannerCaption2 text={title.slice(20)} />
           <BannerHead text={subTitle} />
           {/* <PrimaryButton sectionEnquired="Banner" /> */}
         </div>

@@ -46,7 +46,9 @@ function Vision({ overview, jsonData }) {
           {isReadMore ? "...read more" : "Show less"}
         </span> */}
       </div>
-      <PrimaryButton sectionEnquired="Vision" text={cta} />
+      <div className="flex justify-center items-center w-64 h-1">
+        <PrimaryButton sectionEnquired="Vision" text={cta} />
+      </div>
     </div>
   );
 }

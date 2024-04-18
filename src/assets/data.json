@@ -1,7 +1,7 @@
 {
   "fold1": {
     "title": "Total Environment’s Plotted Sanctuary",
-    "subTitle": "TANGLED UP IN THE GREEN.",
+    "subTitle": "TANGLED UP IN THE GREEN",
     "cta": "Contact us"
   },
   "fold2": {
@@ -10,15 +10,16 @@
     "body1p1": "Discover Tangled Up in Green, a vision of Total Environment on the greenery landscapes of Devanahalli. Spread across 115 acres, away from the urban clamour, take advantage of the chance to acquire these luxurious gated community plots in North Bangalore crafted with architectural elegance and environmental consciousness.",
     "body1p2": "This expansive township is strategically located near the Kempogowda International Airport, ensuring easy connectivity. With plot sizes ranging from 1800 sq. ft. to 7200 sq. ft., the project caters to diverse needs. The proximity to Nandi Hills offers breathtaking views that are perfect for nature enthusiasts.",
     "body1p3": "Whether you stroll through the Tree Museum to learn about its taxonomy and history or have a light moment with your neighbours in the lush park, and your experience remains lively. The clubhouse, party area, and amphitheatre bring out the social butterfly in you. Amenities like cycling tracks, sports courts, and a gymnasium promote health and wellness.",
-    "cta": "Enquire Now.",
-    "heading2": "Tangled Up In Green - Project Highlights.",
-    "body2": "Tangled Up in Green, the new gated community plotted villas in North Bangalore, has plenty of amenities and benefits, highlighting the project's contribution to luxury living and tranquillity. How could premium living blend with lush living? This RERA-approved project is crafted with the sole purpose of providing opulence and style with ecological responsibility. Know further how the project supports luxurious living with tranquillity from:",
+    "cta": "Download Brochure",
+    "heading2": "Tangled Up In Green - Project Highlights",
+    "body2p1": "Tangled Up in Green, the new gated community plotted villas in North Bangalore, has plenty of amenities and benefits, highlighting the project's contribution to luxury living and tranquillity. How could premium living blend with the lush living?",
+    "body2p2": "This project, approved by RERA, is meticulously designed to offer opulence and style while maintaining ecological responsibility. Learn more about how it promotes luxurious living with tranquillity below - ",
     "highlights": [
-      "Various unit sizes range from 1800 sq. ft. to 5000 sq. ft., with some units up to 7200 sq. ft.",
+      "BMRDA approval assures reliable infrastructure and amenities, ensuring secure investment and quality living standards in certified layouts.",
       "RERA registered certificate number: PRM/KA/RERA/1250/303/PR/080124/006538",
-      "The prime location is on Doddaballupur main road, Devanahalli.",
       "It is close to Stonehill International School, New Manasa Hospital, KIA, Devanahalli Railway Station, Nandi Hills, and many more.",
-      "Close proximity to JW Marriot, Foxconn Hon Hai Technology, Decathlon Anubhava, KIA, Devanhalli Business park and more.",
+      "The 115-acre township has 968 Residential Plots & 4 Commercial Plots ranging from 1800 to 7200sq.ft.",
+      "Close proximity to JW Marriot, Foxconn Hon Hai Technology, Decathlon Anubhava, KIA, Devanhalli Business Park and more.",
       "Premium amenities include a yoga deck, eucalyptus grove, playground, cycling track, clubhouse, amphitheatre, and more."
     ]
   },
@@ -31,7 +32,7 @@
       "Techparks and Infrastructures",
       "Luxurious Amenities"
     ],
-    "cta": "Know more."
+    "cta": "Enquire Now"
   },
   "fold4": {
     "heading": "Tangled Up In Green - Proximities",
@@ -67,22 +68,37 @@
         "desc": "Enjoy blissful evenings at our park, and for pet lovers, we've created a separate dog park to enhance your bond with furry friends."
       },
       {
-        "quality": "Amphitheatre and Party area",
+        "quality": "Amphitheatre",
         "desc": "Experience unforgettable entertainment at our amphitheatre with gallery seating, and for lively gatherings, our party area awaits your presence."
       },
       {
-        "quality": "Yoga deck and Running tracks",
+        "quality": "Yoga Deck",
         "desc": "Discover tranquillity on our yoga deck, or fuel your active lifestyle on our running tracks—ideal for fitness enthusiasts seeking balance and vigour."
       }
     ]
   },
   "fold6": {
     "amenities": [
-      "Intimate Clusters",
-      "Cobbled Streets",
-      "Central Boulevard",
-      "Cycling Track",
-      "Tree Museum"
+      {
+        "quality": "Intimate Clusters",
+        "desc": "Buildings built close to each other spare space and improve the neighbours' social understanding."
+      },
+      {
+        "quality": "Cobbled Streets",
+        "desc": "Stroll along the picturesque cobbled streets for a nostalgic vibe and timeless elegance in your daily walks."
+      },
+      {
+        "quality": "Central Boulevard",
+        "desc": "Accompanied by lushful tress on both sides, the avenue roads bring aesthetic beauty as well as refreshing air"
+      },
+      {
+        "quality": "Cycling Track",
+        "desc": "Pedal your way to fitness on our scenic cycling track, blending exercise with nature's essence."
+      },
+      {
+        "quality": "Tree Museum",
+        "desc": "Tree Museum, a captivating space celebrating the rich diversity and knowing their history and taxonomy."
+      }
     ],
     "cta": "Know more."
   },

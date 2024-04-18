@@ -37,7 +37,7 @@ function Home() {
         specification={specification}
         jsonData={jsonData}
       />
-      <div className="grid gap-8">
+      <div className="grid gap-16">
         <BannerVid jsonData={jsonData} />
         <Vision overview={overview} jsonData={jsonData} />
         <Highlights jsonData={jsonData} />
