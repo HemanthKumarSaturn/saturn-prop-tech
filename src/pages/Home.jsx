@@ -52,7 +52,7 @@ function Home() {
         <Ameneties amenities={amenities} jsonData={jsonData} />
         <MasterPlan jsonData={jsonData} />
         {/* <Specifications specification={specification} jsonData={jsonData} /> */}
-        <UpdatedSpecs />
+        <UpdatedSpecs specification={specification} jsonData={jsonData} />
         <ExpertOpinion jsonData={jsonData} />
         <FAQS jsonData={jsonData} />
         {/* <NewFAQ /> */}

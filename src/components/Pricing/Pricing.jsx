@@ -72,7 +72,7 @@ function Pricing() {
       <div className="text-base font-bold leading-5 text-black">
         ***PLC & Registration Charges Extra
       </div>
-      <ContactUsModal text="Enquire Now" sectionEnquired="Pricing" />
+      <ContactUsModal text="SCHEDULE SITE VISIT" sectionEnquired="Pricing" />
     </div>
   );
 }

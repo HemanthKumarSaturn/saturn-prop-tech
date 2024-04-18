@@ -16,8 +16,10 @@ const Feature = ({ icon, title, description }) => (
   </div>
 );
 
-const MyComponent = () => {
-  const siteFeatures = [
+const MyComponent = ({ specification, jsonData }) => {
+  const { fold9 } = jsonData;
+  const { heading, leftSide, siteDevelopment, rightSide, utilities } = fold9;
+  let siteFeatures = [
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/f8934633b789dba6eeb48e65e1eed904dd45aa5ec7aa358e80be8dfc1e366abc?apiKey=6d29d163b59344eda42474c42f65e83e&",
       title: "Boundary Walls",
@@ -51,7 +53,15 @@ const MyComponent = () => {
     },
   ];
 
-  const utilityFeatures = [
+  siteFeatures = siteFeatures.map((feature, index) => {
+    const updatedFeature = {
+      ...feature,
+      title: siteDevelopment[index].quality,
+      description: siteDevelopment[index].desc,
+    };
+    return updatedFeature;
+  });
+  let utilityFeatures = [
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/06f1607541ed840ede9dcec28a90adf79edf5da6d086e09726b6189bd29115d0?apiKey=6d29d163b59344eda42474c42f65e83e&",
       title: "Power Supply",
@@ -79,17 +89,25 @@ const MyComponent = () => {
       description: "Sewage treatment plant shall be provided.",
     },
   ];
+  utilityFeatures = utilityFeatures.map((feature, index) => {
+    const updatedFeature = {
+      ...feature,
+      title: utilities[index].quality,
+      description: utilities[index].desc,
+    };
+    return updatedFeature;
+  });
 
   return (
     <div className="flex flex-col py-11 bg-lime-50 bg-opacity-20">
       <h1 className="self-center text-4xl font-bold text-black leading-[51.8px] max-md:max-w-full">
-        Tangled Up in Green - Specification
+        {heading}
       </h1>
       <div className="mt-9 max-md:mr-1.5 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <section className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <h2 className="self-center text-2xl font-medium leading-8 text-black capitalize">
-              SITE DEVELOPMENT
+              {leftSide}
             </h2>
             <div className="mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -136,7 +154,7 @@ const MyComponent = () => {
           </section>
           <section className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <h2 className="self-center text-2xl font-medium leading-8 text-black capitalize">
-              UTILITIES
+              {rightSide}
             </h2>
             <div className="mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col max-md:gap-0">
