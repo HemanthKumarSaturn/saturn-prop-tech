@@ -6,6 +6,7 @@ import ReraIcon from "../Icons/ReraIcon";
 import TownShipIcon from "../Icons/TownShipIcon";
 import UpcomingIcon from "../Icons/UpcomingIcon";
 import PrimaryButton from "../common/PrimaryButton";
+import ContactUsModal from "../ContactUs/ContactUsModal";
 
 const FeatureItem = ({ children }) => (
   <div className="font-semibold w-fit text-nowrap">{children}</div>
@@ -69,7 +70,8 @@ function HighlightsList({ highlightsListing, highlights, cta }) {
           </div>
         ))}
         <div className="w-48 flex justify-center items-center">
-          <PrimaryButton sectionEnquired="Highlights" text={cta} />
+          {/* <PrimaryButton sectionEnquired="Highlights" text={cta} /> */}
+          <ContactUsModal sectionEnquired="Highlights" text={cta} />
         </div>
       </div>
     </div>

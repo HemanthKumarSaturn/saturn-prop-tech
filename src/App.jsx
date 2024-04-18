@@ -9,10 +9,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/contact-us",
-    element: <ContactUs />,
-  },
 ]);
 
 function App() {

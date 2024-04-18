@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
+import ContactUsModal from "../ContactUs/ContactUsModal";
 
 const InfoCard = ({ icon, title, value }) => {
   return (
@@ -97,7 +98,11 @@ const FilterUpdated = () => {
         />
       ))}
       <div className="flex justify-center items-center w-[17rem]">
-        <PrimaryButton text="SCHEDULE SITE VISIT" />
+        {/* <PrimaryButton text="SCHEDULE SITE VISIT" /> */}
+        <ContactUsModal
+          text="SCHEDULE SITE VISIT"
+          sectionEnquired="Schedule Site Visit"
+        />
       </div>
     </div>
   );

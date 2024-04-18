@@ -1,6 +1,7 @@
 import * as React from "react";
 import IconWithLink from "./IconWithLink";
 import PrimaryButton from "./PrimaryButton";
+import ContactUsModal from "../ContactUs/ContactUsModal";
 
 function IconWithLinkContainer({ proximities, cta }) {
   return (
@@ -19,7 +20,8 @@ function IconWithLinkContainer({ proximities, cta }) {
           <IconWithLink proximity={proximity} />
         ))}
       </div>
-      <PrimaryButton sectionEnquired="Location" text={cta} />
+      {/* <PrimaryButton sectionEnquired="Location" text={cta} /> */}
+      <ContactUsModal sectionEnquired="Location" text={cta} />
     </div>
   );
 }

@@ -22,6 +22,8 @@ import BannerVid from "../components/Banner/Bannervid";
 import jsonData from "../assets/data.json";
 import NewFAQ from "../components/FAQs/NewFAQ";
 import Ratings from "../components/Ratings/Ratings";
+import ContactUsModal from "../components/ContactUs/ContactUsModal";
+import UpdatedSpecs from "../components/Specification/UpdatedSpecific";
 
 function Home() {
   const overview = useRef(null);
@@ -41,14 +43,16 @@ function Home() {
       <div className="grid gap-16">
         <BannerVid jsonData={jsonData} />
         <Vision overview={overview} jsonData={jsonData} />
+        {/* <ContactUsModal /> */}
         <Highlights jsonData={jsonData} />
-        {/* <Pricing /> */}
+        <Pricing />
         <Location location={location} jsonData={jsonData} />
         <ValueAdded jsonData={jsonData} />
         <Gallery jsonData={jsonData} />
         <Ameneties amenities={amenities} jsonData={jsonData} />
         <MasterPlan jsonData={jsonData} />
-        <Specifications specification={specification} jsonData={jsonData} />
+        {/* <Specifications specification={specification} jsonData={jsonData} /> */}
+        <UpdatedSpecs />
         <ExpertOpinion jsonData={jsonData} />
         <FAQS jsonData={jsonData} />
         {/* <NewFAQ /> */}

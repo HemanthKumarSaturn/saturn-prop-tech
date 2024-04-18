@@ -4,6 +4,7 @@ import Heading from "../common/Heading";
 import Paragraph from "../common/Paragraph";
 import ParagraphNoReadMore from "../common/ParagraphWithoutReadMore";
 import { useState } from "react";
+import ContactUsModal from "../ContactUs/ContactUsModal";
 
 function Vision({ overview, jsonData }) {
   const { fold2 } = jsonData;
@@ -47,7 +48,8 @@ function Vision({ overview, jsonData }) {
         </span> */}
       </div>
       <div className="flex justify-center items-center w-64 h-1">
-        <PrimaryButton sectionEnquired="Vision" text={cta} />
+        {/* <PrimaryButton sectionEnquired="Vision" text={cta} /> */}
+        <ContactUsModal sectionEnquired="Vision" text={cta} />
       </div>
     </div>
   );

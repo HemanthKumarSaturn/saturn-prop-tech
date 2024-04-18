@@ -1,6 +1,7 @@
 import * as React from "react";
 import PrimaryButton from "../common/PrimaryButton";
 import { Tooltip } from "react-tooltip";
+import ContactUsModal from "../ContactUs/ContactUsModal";
 
 function NavItem({ text, method }) {
   const scrollToSection = (elementRef) => {
@@ -62,7 +63,8 @@ function HeadingBar({ overview, amenities, location, specification }) {
           <ContactInfo />
         </nav>
         <div className="flex justify-center items-center w-48">
-          <PrimaryButton sectionEnquired="Nav Bar" text="Enquire Now" />
+          {/* <PrimaryButton sectionEnquired="Nav Bar" text="Enquire Now" /> */}
+          <ContactUsModal sectionEnquired="Nav Bar" text="Enquire Now" />
         </div>
       </div>
     </div>
