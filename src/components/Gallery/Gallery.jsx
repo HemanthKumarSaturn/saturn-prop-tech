@@ -6,7 +6,8 @@ import CentralBoulevard from "../../assets/gallery/images/centralyeard.jpeg";
 import DrivewayImage from "../../assets/gallery/images/driveaway.jpeg";
 import StreetViewImage from "../../assets/gallery/images/streetscape.jpeg";
 import StreetscapeImage from "../../assets/gallery/images/streetview.jpg";
-
+import VideoPlayer from "../common/VideoPlayer";
+import Vid from "../../assets/gallery/videos/banner-video.mp4";
 function Gallery() {
   const [isGallery, setIsGallery] = useState(true);
   const slides = [
@@ -53,7 +54,7 @@ function Gallery() {
         </div>
       </div>
       <div className="w-[75%] m-auto">
-        <Carousel slides={slides} />
+        {isGallery ? <Carousel slides={slides} /> : <VideoPlayer src={Vid} />}
       </div>
     </div>
   );

@@ -39,21 +39,30 @@ function ExpertOpinion({ jsonData }) {
                   gap: "1rem",
                   alignItems: "center",
                   padding: "1rem 0",
+                  width: "100%",
                 }}
               >
                 {pros?.map((pro) => (
                   <div
                     style={{
-                      border: "1px solid black",
+                      borderRadius: "20px",
+                      border: "1px solid rgb(239 230 230)",
+                      boxShadow:
+                        "0px 4px 4px 0px rgba(0, 0, 0, 0.25)  0px 4px 4px 0px",
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
                     <p
                       className="text-black"
                       style={{
-                        width: "100%",
+                        width: "fit-content",
                         textWrap: "pretty",
                         lineHeight: "normal",
                         padding: "1rem",
+                        // opacity:
                       }}
                     >
                       {pro}
@@ -67,7 +76,12 @@ function ExpertOpinion({ jsonData }) {
             <div className="flex flex-col grow px-9 pb-16 text-white whitespace-nowrap border border-black border-solid leading-[51.8px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <div
                 className="z-10 justify-center  text-4xl font-bold items-center px-16 py-3.5 mx-7 -mt-4 bg-red-500 rounded-xl shadow-sm max-md:px-5 max-md:mx-2.5"
-                style={{ padding: "0px 94px" }}
+                style={{
+                  padding: "0px 94px",
+                  justifyContent: "center",
+                  display: "flex",
+                  alignItems: "center",
+                }}
               >
                 {rightSide}
               </div>
@@ -81,21 +95,23 @@ function ExpertOpinion({ jsonData }) {
                   padding: "1rem 0",
                 }}
               >
-                {pros?.map((pro) => (
+                {cons?.map((pro) => (
                   <div
                     style={{
                       borderRadius: "20px",
-                      border: "1px solid #000",
-                      // opacity: 0.2,
-                      boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-                      // #000000
+                      border: "1px solid rgb(239 230 230)",
+                      boxShadow:
+                        "0px 4px 4px 0px rgba(0, 0, 0, 0.25)  0px 4px 4px 0px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
                     }}
-                    // className="rounded-2xl"
                   >
                     <p
                       className="text-black"
                       style={{
-                        width: "100%",
+                        width: "fit-content",
                         textWrap: "pretty",
                         lineHeight: "normal",
                         padding: "1rem",

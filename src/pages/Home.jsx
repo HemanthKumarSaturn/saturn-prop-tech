@@ -21,6 +21,7 @@ import { useRef } from "react";
 import BannerVid from "../components/Banner/Bannervid";
 import jsonData from "../assets/data.json";
 import NewFAQ from "../components/FAQs/NewFAQ";
+import Ratings from "../components/Ratings/Ratings";
 
 function Home() {
   const overview = useRef(null);
@@ -52,7 +53,8 @@ function Home() {
         <FAQS jsonData={jsonData} />
         {/* <NewFAQ /> */}
         <AboutBuilder jsonData={jsonData} />
-        <ProjectDetails jsonData={jsonData} />
+        <Ratings />
+        {/* <ProjectDetails jsonData={jsonData} /> */}
         <OtherProjects jsonData={jsonData} />
         <Footer jsonData={jsonData} />
       </div>

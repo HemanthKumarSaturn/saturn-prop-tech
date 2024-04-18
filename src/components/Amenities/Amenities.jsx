@@ -100,7 +100,6 @@ function Amenities({ amenities, jsonData }) {
           ))}
         </div>
       </div>
-      <PrimaryButton sectionEnquired="Amenities" />
     </div>
   );
 }
