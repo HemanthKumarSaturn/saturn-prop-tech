@@ -40,7 +40,7 @@ function Home() {
         specification={specification}
         jsonData={jsonData}
       />
-      <div className="grid gap-16">
+      <div className="grid gap-16 pt-25">
         <BannerVid jsonData={jsonData} />
         <Vision overview={overview} jsonData={jsonData} />
         {/* <ContactUsModal /> */}

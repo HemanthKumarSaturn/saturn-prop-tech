@@ -75,7 +75,7 @@ export default function Map({ proximities, cta }) {
       // Save instance to state:
       setRoutingMachine(RoutingMachineRef.current);
     }
-  }, [map, end]);
+  }, [map]);
 
   // Once routing machine instance is ready, add to map:
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Map({ proximities, cta }) {
   useEffect(() => {
     console.log("location changed");
     console.log({ end });
-  }, [end]);
+  }, [start, end]);
 
   return (
     <div
@@ -104,7 +104,7 @@ export default function Map({ proximities, cta }) {
     >
       <MapContainer
         center={[12.988, 77.6895]}
-        zoom={13}
+        zoom={3}
         zoomControl={false}
         style={{ width: "70%", height: "100%" }}
         // Set the map instance to state when ready:

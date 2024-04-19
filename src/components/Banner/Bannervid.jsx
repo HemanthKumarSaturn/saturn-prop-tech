@@ -14,7 +14,7 @@ function Bannervid({ jsonData }) {
   const { fold1 } = jsonData;
   const { title, subTitle, cta } = fold1;
   return (
-    <div className="landingpage">
+    <div className="landingpage pb-3">
       <video src={BgVideo} autoPlay muted loop className="video-bg" />
       {/* <div className="bg-overlay"></div> */}
       <div
