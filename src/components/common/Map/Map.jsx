@@ -1,10 +1,28 @@
 import "./styles.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  LayersControl,
+} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import placeHolderIcon from "../../../assets/icons/placeholder.png";
 import { Icon, divIcon, point } from "leaflet";
 import IconWithLinkContainer from "../IconWithLinkContainer";
+import React, { useEffect, useState, useRef } from "react";
+import L from "leaflet";
+import RoutingControl from "./RoutingControl";
+
+// Import the JS and CSS:
+import "leaflet-routing-machine";
+import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
+
+// Base map tile:
+const maps = {
+  base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+};
 
 // create custom icon
 const customIcon = new Icon({
@@ -23,21 +41,51 @@ const createClusterCustomIcon = function (cluster) {
 };
 
 export default function Map({ proximities, cta }) {
-  // markers
-  const markers = [
-    {
-      geocode: [13.1155, 77.607],
-      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
-    },
-    {
-      geocode: [13.025, 77.534],
-      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
-    },
-    {
-      geocode: [12.988, 77.6895],
-      popUp: <IconWithLinkContainer proximities={proximities} cta={cta} />,
-    },
-  ];
+  // Set up a useState hook for our map instance:
+  const [map, setMap] = useState(null);
+
+  // State vars for our routing machine instance:
+  const [routingMachine, setRoutingMachine] = useState(null);
+
+  // Start-End points for the routing machine:
+  const [start, setStart] = useState([13.1155, 77.607]);
+  const [end, setEnd] = useState([13.025, 77.534]);
+
+  // Ref for our routing machine instace:
+  const RoutingMachineRef = useRef(null);
+
+  // Create the routing-machine instance:
+  useEffect(() => {
+    // Check For the map instance:
+    if (!map) return;
+    if (map) {
+      // Assign Control to React Ref:
+      RoutingMachineRef.current = L.Routing.control({
+        position: "topleft", // Where to position control on map
+        lineOptions: {
+          // Options for the routing line
+          styles: [
+            {
+              color: "#757de8",
+            },
+          ],
+        },
+        waypoints: [start, end], // Point A - Point B
+      });
+      // Save instance to state:
+      setRoutingMachine(RoutingMachineRef.current);
+    }
+  }, [map]);
+
+  // Once routing machine instance is ready, add to map:
+  useEffect(() => {
+    if (!routingMachine) return;
+    if (routingMachine) {
+      routingMachine.addTo(map);
+      routingMachine.setWaypoints([start, end]);
+    }
+    console.log("Location changed");
+  }, [routingMachine, start, end]);
 
   return (
     <div
@@ -46,28 +94,38 @@ export default function Map({ proximities, cta }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        height: "100vh",
+        gap: "1rem",
       }}
     >
       <MapContainer
         center={[12.988, 77.6895]}
         zoom={13}
-        style={{ width: "100%" }}
+        zoomControl={false}
+        style={{ width: "70%", height: "100%" }}
+        // Set the map instance to state when ready:
+        whenCreated={(map) => setMap(map)}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=vkfT9AgfVPIWxV4pkc0I"
+        <RoutingControl
+          position={"topleft"}
+          start={start}
+          end={end}
+          color={"#757de8"}
         />
-        <MarkerClusterGroup
-          chunkedLoading
-          iconCreateFunction={createClusterCustomIcon}
-        >
-          {markers.map((marker) => (
-            <Marker position={marker.geocode} icon={customIcon}>
-              <Popup>{marker.popUp}</Popup>
-            </Marker>
-          ))}
-        </MarkerClusterGroup>
+        <LayersControl position="topright">
+          <LayersControl.BaseLayer checked name="Map">
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url={maps.base}
+            />
+          </LayersControl.BaseLayer>
+        </LayersControl>
       </MapContainer>
+      <IconWithLinkContainer
+        proximities={proximities}
+        cta={cta}
+        setEnd={setEnd}
+      />
     </div>
   );
 }

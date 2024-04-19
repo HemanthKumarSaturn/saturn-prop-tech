@@ -72,7 +72,12 @@ function Pricing() {
       <div className="text-base font-bold leading-5 text-black">
         ***PLC & Registration Charges Extra
       </div>
-      <ContactUsModal text="SCHEDULE SITE VISIT" sectionEnquired="Pricing" />
+      <div
+        className="flex justify-center items-center"
+        style={{ width: "17rem", height: "1rem" }}
+      >
+        <ContactUsModal text="SCHEDULE SITE VISIT" sectionEnquired="Pricing" />
+      </div>
     </div>
   );
 }
