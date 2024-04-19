@@ -16,7 +16,7 @@ function Paragraph2({ text }) {
           onClick={toggleReadMore}
           className="text-indigo-600 cursor-pointer"
         >
-          {isReadMore ? "...read more" : "Show less"}
+          {isReadMore ? "...Read more" : "Show less"}
         </span>
       )}
       <br />

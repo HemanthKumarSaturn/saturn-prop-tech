@@ -44,7 +44,7 @@ function Vision({ overview, jsonData }) {
           onClick={toggleReadMore}
           className="text-indigo-600 cursor-pointer"
         >
-          {isReadMore ? "...read more" : "Show less"}
+          {isReadMore ? "...Read more" : "Show less"}
         </span> */}
       </div>
       <div className="flex justify-center items-center w-64 h-1">

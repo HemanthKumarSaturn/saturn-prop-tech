@@ -1,14 +1,14 @@
 {
   "fold1": {
-    "title": "Total Environment’s Plotted Sanctuary",
-    "subTitle": "TANGLED UP IN THE GREEN",
-    "cta": "Contact us"
+    "title": "Total Environment's Plots at Devanahalli",
+    "subTitle": "TANGLED UP IN GREEN",
+    "cta": "Schedule Site Visit"
   },
   "fold2": {
     "heading": "A Vision for Elite Experience",
     "subHeading": "Total Environment Plots - Tangled Up in Green",
     "body1p1": "Discover Tangled Up in Green, a vision of Total Environment on the greenery landscapes of Devanahalli. Spread across 115 acres, away from the urban clamour, take advantage of the chance to acquire these luxurious gated community plots in North Bangalore crafted with architectural elegance and environmental consciousness.",
-    "body1p2": "This expansive township is strategically located near the Kempogowda International Airport, ensuring easy connectivity. With plot sizes ranging from 1800 sq. ft. to 7200 sq. ft., the project caters to diverse needs. The proximity to Nandi Hills offers breathtaking views that are perfect for nature enthusiasts.",
+    "body1p2": "This expansive township is strategically located near the Kempogowda International Airport, ensuring easy connectivity. With plot sizes ranging from 1800 sq. ft. to 7200 sq. ft., the project caters to various needs. The closeness to Nandi Hills offers breathtaking views perfect for nature lovers.",
     "body1p3": "Whether you stroll through the Tree Museum to learn about its taxonomy and history or have a light moment with your neighbours in the lush park, and your experience remains lively. The clubhouse, party area, and amphitheatre bring out the social butterfly in you. Amenities like cycling tracks, sports courts, and a gymnasium promote health and wellness.",
     "cta": "Download Brochure",
     "heading2": "Tangled Up In Green - Project Highlights",
@@ -44,9 +44,9 @@
       "10 Km - Eurokids Devanahalli",
       "15 Km - Gitanjali International School",
       "5 Km - Devanahalli Railway Sation",
-      "17 Km - Decathlon Anubhava",
       "20 Km - Stonehill International School",
-      "8 Km - Akash International School"
+      "8 Km - Akash International School",
+      "17 Km - Decathlon Anubhava"
     ],
     "cta": "Enquire Now"
   },
@@ -61,19 +61,19 @@
       },
       {
         "quality": "Clubhouse",
-        "desc": "The aesthetic clubhouse, with a people-centred design, captures and uplifts the spirit of our residents."
+        "desc": "The aesthetic clubhouse, with a people-centred design, captures and uplifts the spirit of the residents."
       },
       {
         "quality": "Parks",
-        "desc": "Enjoy blissful evenings at our park, and for pet lovers, we've created a separate dog park to enhance your bond with furry friends."
+        "desc": "Enjoy blissful evenings in the park, and for pet lovers, there is a separate dog park to enhance your bond with furry friends."
       },
       {
         "quality": "Amphitheatre",
-        "desc": "Experience unforgettable entertainment at our amphitheatre with gallery seating, and for lively gatherings, our party area awaits your presence."
+        "desc": "Experience unforgettable entertainment at the amphitheatre with gallery seating, and for lively gatherings, the party area awaits your presence."
       },
       {
         "quality": "Yoga Deck",
-        "desc": "Discover tranquillity on our yoga deck, or fuel your active lifestyle on our running tracks—ideal for fitness enthusiasts seeking balance and vigour."
+        "desc": "Discover tranquillity on the yoga deck, or fuel your active lifestyle on the running tracks—ideal for fitness enthusiasts seeking balance and vigour."
       }
     ]
   },
@@ -89,27 +89,76 @@
       },
       {
         "quality": "Central Boulevard",
-        "desc": "Accompanied by lushful tress on both sides, the avenue roads bring aesthetic beauty as well as refreshing air"
+        "desc": "Lined with greenery on both sides, the avenue roads bring aesthetic beauty and refreshing air."
       },
       {
         "quality": "Cycling Track",
-        "desc": "Pedal your way to fitness on our scenic cycling track, blending exercise with nature's essence."
+        "desc": "Pedal your way to fitness on the scenic cycling track, blending exercise with nature's essence."
       },
       {
         "quality": "Tree Museum",
-        "desc": "Tree Museum, a captivating space celebrating the rich diversity and knowing their history and taxonomy."
+        "desc": "The Tree Museum is a captivating space celebrating the rich diversity and knowing their history and taxonomy."
       }
     ],
     "cta": "Know more."
   },
   "fold7": {
-    "heading": "Explore the Premium Amenities at Tangled Up in Green.",
-    "listing": "Same as mentioned",
-    "cta": "Enquire Now."
+    "heading": "Premium Amenities at Tangled Up in Green",
+    "listing": [
+      {
+        "title": "Cycling Track",
+        "desc": "Pedal your way to fitness on the scenic cycling track, blending exercise with nature's essence."
+      },
+      {
+        "title": "Meditation",
+        "desc": "Escape to the yoga lawn for some peaceful meditation and embrace the calming essence of the serene environment."
+      },
+      {
+        "title": "Dog Park",
+        "desc": "Treat your furry friends to a fun day at the dog park, where they can play and run freely among nature."
+      },
+      {
+        "title": "Jogging track",
+        "desc": "Feel alive as you go for a refreshing jog on the special running track."
+      },
+      {
+        "title": "Stepped Seats",
+        "desc": "Relax in the tiered seating arrangement and soak in the beautiful scenery surrounding you."
+      },
+      {
+        "title": "Eucalyptus Grove",
+        "desc": "Experience the soothing aroma of Eucalyptus mingling with the tranquillity of a leisurely walk."
+      },
+      {
+        "title": "Kids Play Area",
+        "desc": "Let your children play, laugh, and explore amidst the beauty of the outdoors."
+      },
+      {
+        "title": "Open Playground",
+        "desc": " Unleash your inner child on the expansive Open Playground, where laughter, exploration, and exciting escapades await."
+      },
+      {
+        "title": "Reflexology Path",
+        "desc": "Walk barefoot on the cobblestone path to stimulate pressure points, boost circulation, and promote relaxation."
+      },
+      {
+        "title": "Seating Deck",
+        "desc": "Enjoy a break and soak up the sunshine on the cosy seating deck, perfect for unwinding in the fresh air."
+      },
+      {
+        "title": "Basketball Court",
+        "desc": "Challenge your friends to a game of hoops on the basketball court to show off your skills."
+      },
+      {
+        "title": "Skating Rink",
+        "desc": "Experience the thrill of gliding on the smooth skating rink, creating lasting memories and having a blast on the ice."
+      }
+    ],
+    "cta": "Enquire Now"
   },
   "fold9": {
-    "heading": "Tangled Up in Green - Specifications:",
-    "leftSide": "Site Development.",
+    "heading": "Tangled Up in Green - Specifications",
+    "leftSide": "Site Development",
     "siteDevelopment": [
       {
         "quality": "Boundary Walls",
@@ -171,9 +220,9 @@
     ],
     "rightSide": "CONS",
     "cons": [
-      "Still developing amenities",
-      "Distance from the city centre",
-      "Huge demand for the plots"
+      "Some public amenities are still being developed in and around Tangled Up in Green Plot.",
+      "The tranquil setting of the Tangled Up in Green Plots project makes it a bit of a hassle to get to and from Central Bangalore as well as other areas in East and South Bangalore.",
+      "There is a huge demand for plots due to the limited number available, creating competition among buyers."
     ]
   },
   "faqs": {

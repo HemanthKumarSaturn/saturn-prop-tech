@@ -14,7 +14,7 @@ const FeaturesList = ({ qualities, isReadMore, toggleReadMore, isFirst }) => {
               >
                 {isFirst
                   ? isReadMore
-                    ? "...read more"
+                    ? "...Read more"
                     : ""
                   : isFirst != null
                   ? isReadMore

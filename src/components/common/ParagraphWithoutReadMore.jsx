@@ -7,7 +7,7 @@ function Paragraph({ text, isReadMore, toggleReadMore, isFirst }) {
       <span onClick={toggleReadMore} className="text-indigo-600 cursor-pointer">
         {isFirst
           ? isReadMore
-            ? "...read more"
+            ? "...Read more"
             : ""
           : isFirst != null
           ? isReadMore
