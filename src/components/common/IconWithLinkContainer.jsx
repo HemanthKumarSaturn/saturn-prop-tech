@@ -56,9 +56,9 @@ function IconWithLinkContainer({ proximities, cta, setEnd, end }) {
     "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
     "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
     "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
+    null,
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
     "https://cdn.builder.io/api/v1/image/assets/TEMP/0d12f0b39b23e9f9c0da50c2e35af355eebd257a9eedca9e308f3307166d51dd?apiKey=6d29d163b59344eda42474c42f65e83e&",
-    "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
-    "https://cdn.builder.io/api/v1/image/assets/TEMP/97b32e30143fb051534ba9fea6f5c52502ea4e3cf41db363630f540db3a7cefd?apiKey=6d29d163b59344eda42474c42f65e83e&",
   ];
   proximities = proximities.map((prox, index) => {
     const proxy = {

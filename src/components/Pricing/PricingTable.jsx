@@ -19,7 +19,7 @@ const TableOfCards = ({ data }) => {
     "Development Charges",
     "Club Charges",
     "GST on DC & Club",
-    "",
+    "Total",
   ];
   // Generate table rows for tbody
   const tableBodyRows = [];

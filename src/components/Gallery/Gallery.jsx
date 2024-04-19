@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import green01 from "../../assets/gallery/images/green01.jpg";
 import Carousel from "../common/Carousel";
 import BackGateImage from "../../assets/gallery/images/backgate.jpeg";
@@ -19,13 +19,21 @@ function Gallery() {
     StreetViewImage,
     StreetscapeImage,
   ];
+
+  const ref = useRef(null);
+
   const setGalleryTab = () => {
     setIsGallery(true);
+    if (ref.current)
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   const setVideoTab = () => {
     setIsGallery(false);
+    if (ref.current)
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
+
   return (
     <div className="flex flex-col items-center gap-y-11">
       <div className="text-4xl font-bold text-black">
@@ -55,7 +63,7 @@ function Gallery() {
           Project Walkthrough
         </div>
       </div>
-      <div className="w-[75%] m-auto">
+      <div className="w-[75%] m-auto" ref={ref}>
         {isGallery ? <Carousel slides={slides} /> : <YouTubeVideo />}
       </div>
     </div>

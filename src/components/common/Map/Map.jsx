@@ -75,7 +75,7 @@ export default function Map({ proximities, cta }) {
       // Save instance to state:
       setRoutingMachine(RoutingMachineRef.current);
     }
-  }, [map]);
+  }, [map, end]);
 
   // Once routing machine instance is ready, add to map:
   useEffect(() => {
@@ -84,8 +84,12 @@ export default function Map({ proximities, cta }) {
       routingMachine.addTo(map);
       routingMachine.setWaypoints([start, end]);
     }
-    console.log("Location changed");
   }, [routingMachine, start, end]);
+
+  useEffect(() => {
+    console.log("location changed");
+    console.log({ end });
+  }, [end]);
 
   return (
     <div
@@ -125,6 +129,7 @@ export default function Map({ proximities, cta }) {
         proximities={proximities}
         cta={cta}
         setEnd={setEnd}
+        end={end}
       />
     </div>
   );

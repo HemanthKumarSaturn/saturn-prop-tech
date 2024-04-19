@@ -8,8 +8,9 @@ import { icons } from "feather-icons";
 function Amenities({ amenities, jsonData }) {
   const BASE = "https://cdn.builder.io/api/v1/image/assets/TEMP/";
   const API = "?apiKey=6d29d163b59344eda42474c42f65e83e&";
-  const { fold6 } = jsonData;
-  // const { amenities, cta } = fold6;
+  const { fold7 } = jsonData;
+  const { listing } = fold7;
+
   let ICONS = [
     {
       endPoint:
@@ -71,11 +72,31 @@ function Amenities({ amenities, jsonData }) {
       title: "Seating Deck",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
     },
+    // {
+    //   endPoint:
+    //     "dbd6dd71f81d3462d8ce2f2c47dfd18a0bc945ac4bae9eae57b802df4a871e95",
+    //   title: "Seating Deck",
+    //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
+    // },
+    // {
+    //   endPoint:
+    //     "dbd6dd71f81d3462d8ce2f2c47dfd18a0bc945ac4bae9eae57b802df4a871e95",
+    //   title: "Seating Deck",
+    //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet.",
+    // },
   ];
+
   const headerText = "Tangled Up in Green - Amenities";
-  // icons = icons.map((icon) => {
-  //   const ico = {..icon, }
-  // });
+
+  ICONS = ICONS.map((Icon, index) => {
+    const updatedIcon = {
+      ...Icon,
+      title: listing[index].title,
+      desc: listing[index].desc,
+    };
+    return updatedIcon;
+  });
+
   return (
     <div
       className="flex flex-col items-center gap-20 justify-center rounded-lg"

@@ -25,7 +25,7 @@ function AboutBuilder({ jsonData }) {
                 Total Environment was founded <br />
                 by Kamal Sagar.
               </div>
-              <div></div>
+              {/* <div></div> */}
               <Paragraph2 text={about} />
               <ProjectDetails />
             </div>
