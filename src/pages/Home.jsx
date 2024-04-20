@@ -32,7 +32,7 @@ function Home() {
   const specification = useRef(null);
 
   return (
-    <div style={{ width: "100%", margin: "0px auto" }}>
+    <div style={{ width: "100%", margin: "0px auto", maxWidth: "100vw" }}>
       <HeadingBar
         overview={overview}
         amenities={amenities}
@@ -40,27 +40,46 @@ function Home() {
         specification={specification}
         jsonData={jsonData}
       />
-      <div className="grid gap-16 pt-25" style={{ width: "100%" }}>
-        <BannerVid jsonData={jsonData} />
-        <Vision overview={overview} jsonData={jsonData} />
+      <div
+        className="grid gap-16 pt-25"
+        style={{ width: "100%", maxWidth: "100vw" }}
+      >
+        <BannerVid jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Vision
+          overview={overview}
+          jsonData={jsonData}
+          style={{ maxWidth: "100vw" }}
+        />
         {/* <ContactUsModal /> */}
-        <Highlights jsonData={jsonData} />
-        <Pricing />
-        <Location location={location} jsonData={jsonData} />
-        <ValueAdded jsonData={jsonData} />
-        <Gallery jsonData={jsonData} />
-        <Ameneties amenities={amenities} jsonData={jsonData} />
-        <MasterPlan jsonData={jsonData} />
+        <Highlights jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Pricing style={{ maxWidth: "100vw" }} />
+        <Location
+          location={location}
+          jsonData={jsonData}
+          style={{ maxWidth: "100vw" }}
+        />
+        <ValueAdded jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Gallery jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Ameneties
+          amenities={amenities}
+          jsonData={jsonData}
+          style={{ maxWidth: "100vw" }}
+        />
+        <MasterPlan jsonData={jsonData} style={{ maxWidth: "100vw" }} />
         {/* <Specifications specification={specification} jsonData={jsonData} /> */}
-        <UpdatedSpecs specification={specification} jsonData={jsonData} />
-        <ExpertOpinion jsonData={jsonData} />
-        <FAQS jsonData={jsonData} />
+        <UpdatedSpecs
+          specification={specification}
+          jsonData={jsonData}
+          style={{ maxWidth: "100vw" }}
+        />
+        <ExpertOpinion jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <FAQS jsonData={jsonData} style={{ maxWidth: "100vw" }} />
         {/* <NewFAQ /> */}
-        <AboutBuilder jsonData={jsonData} />
-        <Ratings />
+        <AboutBuilder jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Ratings style={{ maxWidth: "100vw" }} />
         {/* <ProjectDetails jsonData={jsonData} /> */}
-        <OtherProjects jsonData={jsonData} />
-        <Footer jsonData={jsonData} />
+        <OtherProjects jsonData={jsonData} style={{ maxWidth: "100vw" }} />
+        <Footer jsonData={jsonData} style={{ maxWidth: "100vw" }} />
       </div>
     </div>
   );
