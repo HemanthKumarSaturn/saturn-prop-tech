@@ -16,11 +16,15 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className="overflow-hidden relative rounded-3xl">
+    <div
+      className="overflow-hidden relative rounded-3xl"
+      style={{ width: "100%" }}
+    >
       <div
         className={`flex transition ease-out duration-40 rounded-3xl`}
         style={{
           transform: `translateX(-${current * 100}%)`,
+          width: "100%",
         }}
       >
         {slides.map((s, i) => {
