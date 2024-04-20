@@ -5,6 +5,8 @@
   /* text-align: center; */
   width: 100vw;
   padding: 0;
+  max-width: 100%;
+  /* overflow-x: hidden; */
 }
 
 .logo {

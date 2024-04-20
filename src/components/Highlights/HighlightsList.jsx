@@ -69,7 +69,7 @@ function HighlightsList({ highlightsListing, highlights, cta }) {
             <FeatureItem key={index}>{item.title}</FeatureItem>
           </div>
         ))}
-        <div className="w-48 flex justify-center items-center">
+        <div className="min-w-48 flex justify-center items-center">
           {/* <PrimaryButton sectionEnquired="Highlights" text={cta} /> */}
           <ContactUsModal sectionEnquired="Highlights" text={cta} />
         </div>

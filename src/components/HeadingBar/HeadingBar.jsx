@@ -63,7 +63,7 @@ function HeadingBar({ overview, amenities, location, specification }) {
             <NavItem text="Specification" method={specification} />
             <ContactInfo />
           </nav>
-          <div className="flex justify-center items-center w-48">
+          <div className="flex justify-center items-center min-w-48">
             {/* <PrimaryButton sectionEnquired="Nav Bar" text="Enquire Now" /> */}
             <ContactUsModal sectionEnquired="Nav Bar" text="Enquire Now" />
           </div>
