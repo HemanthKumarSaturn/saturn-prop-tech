@@ -2,8 +2,8 @@ import * as React from "react";
 
 function Footer() {
   return (
-    <div className="flex flex-col px-12 pt-14 pb-8 bg-indigo-600 max-md:px-5">
-      <div className="max-md:max-w-full">
+    <div className="flex flex-col px-12 pt-14 pb-8 bg-[rgb(66,66,66)] max-md:px-5 text-[#abb8c3]">
+      {/* <div className="max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[65%] max-md:ml-0 max-md:w-full">
             <div className="mt-4 text-xs leading-4 text-white max-md:mt-10 max-md:max-w-full">
@@ -67,8 +67,8 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex gap-2 self-center mt-6 max-md:flex-wrap">
+      </div> */}
+      {/* <div className="flex gap-2 self-center mt-6 max-md:flex-wrap">
         <div className="shrink-0 my-auto max-w-full h-px border border-solid bg-white bg-opacity-30 border-white border-opacity-30 w-[1028px]" />
         <div className="flex gap-5 justify-between pr-2">
           <img
@@ -87,8 +87,8 @@ function Footer() {
             className="shrink-0 aspect-[1.05] w-[19px] cursor-pointer"
           />
         </div>
-      </div>
-      <div className="mt-2 text-xs font-light text-white max-md:max-w-full">
+      </div> */}
+      <div className="mt-2 text-xs font-light  max-md:max-w-full">
         DISCLAIMER: This website is meant for information purposes only. It
         should not be considered/assumed as an official Site. The website is
         owned by Authorized Channel Partner of Total environment Group. This

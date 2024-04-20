@@ -1,7 +1,10 @@
 import * as React from "react";
 
 const Feature = ({ icon, title, description }) => (
-  <div className="flex gap-3.5 p-5 bg-white rounded-lg">
+  <div
+    className="flex gap-3.5 p-5 bg-white rounded-lg"
+    style={{ height: "150px" }}
+  >
     <div className="flex flex-col justify-center self-start">
       <div className="flex justify-center items-center px-4 rounded-full shadow-sm   min-h-[69px] h-[66px] w-[66px] bg-gradient-to-r from-[#989EF9] to-[#D4D6D7]">
         <img src={icon} alt={title} className="aspect-square w-[35px]" />
@@ -102,8 +105,9 @@ const MyComponent = ({ specification, jsonData }) => {
 
   return (
     <div
-      className="flex flex-col pb-11 bg-lime-50 bg-opacity-20"
+      className="flex flex-col bg-lime-50 bg-opacity-20"
       ref={specification}
+      style={{ height: "50rem", justifyContent: "center" }}
     >
       <h1 className="self-center text-4xl font-bold text-black leading-[51.8px] max-md:max-w-full">
         {heading}
