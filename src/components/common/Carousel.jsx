@@ -29,6 +29,7 @@ function Carousel({ slides }) {
               src={s}
               className=" rounded-3xl w-full h-full"
               key={"circle" + i}
+              style={{ width: "100%" }}
             />
           );
         })}
