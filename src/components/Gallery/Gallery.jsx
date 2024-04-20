@@ -63,7 +63,7 @@ function Gallery() {
           Project Walkthrough
         </div>
       </div>
-      <div className="w-[40rem] m-auto" ref={ref}>
+      <div className="w-[58rem] m-auto" ref={ref}>
         {isGallery ? <Carousel slides={slides} /> : <YouTubeVideo />}
       </div>
     </div>
