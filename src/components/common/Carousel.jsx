@@ -27,9 +27,9 @@ function Carousel({ slides }) {
           return (
             <img
               src={s}
-              className=" rounded-3xl w-full h-full"
+              className=" rounded-3xl h-full"
               key={"circle" + i}
-              style={{ width: "100%" }}
+              style={{ width: "100%", height: "100%" }}
             />
           );
         })}

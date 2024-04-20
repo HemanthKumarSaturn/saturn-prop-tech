@@ -27,9 +27,9 @@ function Bannervid({ jsonData }) {
         }}
       >
         <div className="flex flex-col gap-6 items-center ">
-          <BannerCaption text={title.slice(0, 17)} />
+          {/* <BannerCaption text={title.slice(0, 17)} />
           <BannerCaption2 text={title.slice(20)} />
-          <BannerHead text={subTitle} />
+          <BannerHead text={subTitle} /> */}
           {/* <PrimaryButton sectionEnquired="Banner" /> */}
         </div>
         {/* <div style={{ color: "white" }}>

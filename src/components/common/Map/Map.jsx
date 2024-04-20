@@ -106,7 +106,7 @@ export default function Map({ proximities, cta }) {
         center={[12.988, 77.6895]}
         zoom={3}
         zoomControl={false}
-        style={{ width: "70%", height: "100%" }}
+        style={{ width: "70%", height: "34rem" }}
         // Set the map instance to state when ready:
         whenCreated={(map) => setMap(map)}
       >

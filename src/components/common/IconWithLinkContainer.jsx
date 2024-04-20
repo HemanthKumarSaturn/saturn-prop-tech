@@ -71,7 +71,7 @@ function IconWithLinkContainer({ proximities, cta, setEnd, end }) {
   return (
     <div
       style={{
-        height: "100%",
+        height: "34rem",
         width: "25%",
       }}
       className="bg-violet-100 rounded-3xl flex flex-col gap-4 items-center"

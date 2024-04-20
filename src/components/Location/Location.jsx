@@ -11,7 +11,12 @@ function Location({ location, jsonData }) {
   return (
     <div
       className="flex flex-col mx-auto justify-around gap-y-11 items-center rounded-lg"
-      style={{ position: "relative", width: "74rem", margin: "0px auto" }}
+      style={{
+        position: "relative",
+        width: "74rem",
+        margin: "0px auto",
+        height: "38rem",
+      }}
       ref={location}
     >
       <HeadWithPara text={heading} />
