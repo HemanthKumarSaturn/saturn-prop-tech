@@ -1,26 +1,28 @@
+import { useEffect } from "react";
 import L from "leaflet";
-import { createControlComponent } from "@react-leaflet/core";
-import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
+import "leaflet-routing-machine";
+import { useMap } from "react-leaflet";
 
-const createRoutineMachineLayer = ({ position, start, end, color }) => {
-  const instance = L.Routing.control({
-    position,
-    waypoints: [start, end],
-    lineOptions: {
-      styles: [
-        {
-          color,
-        },
-      ],
-    },
-    routeWhileDragging: false,
-    show: false,
-  });
+L.Marker.prototype.options.icon = L.icon({
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+});
 
-  return instance;
-};
+export default function Routing({ start, end }) {
+  const map = useMap();
 
-const RoutingMachine = createControlComponent(createRoutineMachineLayer);
+  useEffect(() => {
+    if (!map || !start || !end) return;
 
-export default RoutingMachine;
+    const routingControl = L.Routing.control({
+      waypoints: [L.latLng(...start), L.latLng(...end)],
+      routeWhileDragging: true,
+      show: false,
+      fitSelectedRoutes: true, // Automatically fit bounds to the selected route
+    }).addTo(map);
+
+    return () => map.removeControl(routingControl);
+  }, [map, start, end]);
+
+  return null;
+}

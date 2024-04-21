@@ -40,10 +40,53 @@ const createClusterCustomIcon = function (cluster) {
   });
 };
 
+// markers
+let markers = [
+  {
+    geocode: [13.5221981, 77.6790109],
+    popUp: "Hello, I am pop up 1",
+  },
+  {
+    geocode: [13.1976048, 77.7074856],
+    popUp: "Hello, I am pop up 2",
+  },
+  {
+    geocode: [13.3073721, 77.6923379],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [13.303695, 77.54428],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [17.49305, 78.36613],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [13.33512, 77.09811],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [13.03719, 77.66373],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [17.49309, 78.36673],
+    popUp: "Hello, I am pop up 3",
+  },
+  {
+    geocode: [13.33212, 77.09011],
+    popUp: "Hello, I am pop up 3",
+  },
+];
+
 export default function Map({ proximities, cta }) {
   // Set up a useState hook for our map instance:
   const [map, setMap] = useState(null);
-
+  markers = markers.map((marker, index) => {
+    const updatedMarker = { ...marker, popUp: proximities[index] };
+    return updatedMarker;
+  });
   // State vars for our routing machine instance:
   const [routingMachine, setRoutingMachine] = useState(null);
 
@@ -60,6 +103,7 @@ export default function Map({ proximities, cta }) {
     if (!map) return;
     if (map) {
       // Assign Control to React Ref:
+
       RoutingMachineRef.current = L.Routing.control({
         position: "topleft", // Where to position control on map
         lineOptions: {
@@ -86,11 +130,6 @@ export default function Map({ proximities, cta }) {
     }
   }, [routingMachine, start, end]);
 
-  useEffect(() => {
-    console.log("location changed");
-    console.log({ end });
-  }, [start, end]);
-
   return (
     <div
       style={{
@@ -103,25 +142,30 @@ export default function Map({ proximities, cta }) {
       }}
     >
       <MapContainer
-        center={[12.988, 77.6895]}
-        zoom={3}
+        center={[13.2483502, 77.7134377]}
+        zoom={13}
         zoomControl={false}
         style={{ width: "70%", height: "34rem" }}
         // Set the map instance to state when ready:
         whenCreated={(map) => setMap(map)}
       >
-        <RoutingControl
-          position={"topleft"}
-          start={start}
-          end={end}
-          color={"#757de8"}
-        />
+        <RoutingControl start={start} end={end} />
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Map">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url={maps.base}
             />
+            <MarkerClusterGroup
+              chunkedLoading
+              iconCreateFunction={createClusterCustomIcon}
+            >
+              {markers.map((marker) => (
+                <Marker position={marker.geocode} icon={customIcon}>
+                  <Popup>{marker.popUp}</Popup>
+                </Marker>
+              ))}
+            </MarkerClusterGroup>
           </LayersControl.BaseLayer>
         </LayersControl>
       </MapContainer>

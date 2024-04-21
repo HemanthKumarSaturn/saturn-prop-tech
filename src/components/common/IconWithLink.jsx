@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import RailwayTrackIcon from "../../assets/icons/RailwayTrackUp.png";
-
+import { useDispatch } from "react-redux";
+import { setStart, setEnd } from "../../redux/app/map/mapSlice";
 function IconWithLink({ proximity, setEnd, end }) {
+  const dispatch = useDispatch();
   const setLocation = () => {
-    setEnd(proximity.location);
-    // console.log({ end });
+    dispatch(setEnd(proximity.location));
   };
 
   return (
