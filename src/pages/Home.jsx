@@ -24,6 +24,7 @@ import NewFAQ from "../components/FAQs/NewFAQ";
 import Ratings from "../components/Ratings/Ratings";
 import ContactUsModal from "../components/ContactUs/ContactUsModal";
 import UpdatedSpecs from "../components/Specification/UpdatedSpecific";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const overview = useRef(null);
@@ -33,6 +34,31 @@ function Home() {
 
   return (
     <div style={{ width: "100%", margin: "0px auto" }}>
+      <Helmet>
+        <title>Music Website</title>
+        <meta
+          name="description"
+          content="Tangled Up in Green, the new gated community plotted villas in North Bangalore, has plenty of amenities and benefits, highlighting the project's contribution to luxury living and tranquillity. How could premium living blend with the lush living?"
+        />
+        <meta
+          name="keywords"
+          content="BMRDA Approved, RERA Approved, Prime Location, 115 Acre Township, Techparks And Infrastructures, Luxurious Amenities"
+        />
+        <meta property="og:title" content="TANGLED UP IN GREEN" />
+        <meta
+          property="og:description"
+          content="Tangled Up in Green, the new gated community plotted villas in North Bangalore, has plenty of amenities and benefits, highlighting the project's contribution to luxury living and tranquillity. How could premium living blend with the lush living?"
+        />
+        <meta
+          property="og:image"
+          content="https://saturn-prop-tech.vercel.app/"
+        />
+        <meta
+          property="og:url"
+          content="https://saturn-prop-tech.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <HeadingBar
         overview={overview}
         amenities={amenities}
