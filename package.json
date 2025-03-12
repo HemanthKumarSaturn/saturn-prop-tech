@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
-    "axios": "^1.6.8",
+    "axios": "^1.8.2",
     "feather-icons": "^4.29.1",
     "leaflet-routing-machine": "^3.2.12",
     "react": "^18.2.0",
